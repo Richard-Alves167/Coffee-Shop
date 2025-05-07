@@ -14,6 +14,8 @@ namespace CafeComSeuTioAdmin.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        public List<SurveyItem> listSurvey;
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -21,7 +23,8 @@ namespace CafeComSeuTioAdmin.Pages
 
         public void OnGet()
         {
-
+            var json = System.IO.File.ReadAllText(Path.Combine("wwwroot/SampleData/survey.json"));
+            listSurvey = JsonSerializer.Deserialize<List<SurveyItem>>(json);
         }
     }
 }

@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CafeComSeuTioAdmin.styles.css" asp-append-version="true" />
+
+    <environment names="Development">
+        <link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.css"
+    </environment>
+    <environment names="Production">
+        <link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.min.css"
+    </environment>
 </head>
 <body>
     <div class="container">
@@ -19,15 +26,15 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page">Dashboard</a>
+                                <a class="nav-link" aria-current="page" asp-page="/Index">Dashboard</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Products
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item">View All</a></li>
-                                    <li><a class="dropdown-item">Add New</a></li>
+                                    <li><a class="dropdown-item" asp-page="/Products/ViewAllProducts">View All</a></li>
+                                    <li><a class="dropdown-item" asp-page="/Products/AddProduct">Add New</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -58,7 +65,20 @@
                 </div>
                 <div class="col-md-4">
                     <div class="footer-pic">
-                        <p>Picture content goes here.</p>
+                        @{
+                            var urlPath = Context.Request.Path;
+                        }
+                        @switch(urlPath) {
+                            case "/":
+                                <img src="https://i.gifer.com/UEl2.gif" />
+                                break;
+                            case "/Products/AddProduct":
+                                <img src="https://www.mexidodeideias.com.br/?attachment_id=29991" />
+                                break;
+                            case "/Products/ViewAllProducts":
+                                <img src="https://i.pinimg.com/originals/be/e6/df/bee6dfb0b3cff75482d437fbcfcfc7c2.gif" />
+                                break;
+                        }
                     </div>
                 </div>
             </div>

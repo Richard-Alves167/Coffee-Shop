@@ -10,13 +10,13 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: url("../images/cups-dark.png");
+    background: url("../images/download.gif");
     background-size: cover;
 }
 
 footer {
     padding: 25px;
-    background-color: #353535;
+    background-color: #3b2203;
     color: white;
 }
 
