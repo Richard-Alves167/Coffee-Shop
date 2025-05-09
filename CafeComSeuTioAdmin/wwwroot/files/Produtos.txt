@@ -1,0 +1,3 @@
+Cafe Minas,Com grãos moídos,Um pacote de café de grãos queimados e moídos a perfeita condição de Minas Gerais,12,Food
+Morango Peru,Morango seco,Morango muito bom e amarelo,34,Food
+Pitaya,Fruta Dragão,Uma fruta bem exótica e gostosa sendo branca com pontos pretos por dentro.,39,Food
