@@ -12,6 +12,17 @@
 				<td>Categoria</td>
 			</tr>
 		</thead>
+		<hr />
+		@foreach (var produto in Model.ListaProduto)
+		{
+			<tr>
+				<td>@produto.Name</td>
+				<td>@produto.ShortDescription</td>
+				<td>@produto.Description</td>
+				<td>R$ @produto.Price</td>
+				<td>@produto.Category</td>
+			</tr>
+		}
 	</table>
 }
 
