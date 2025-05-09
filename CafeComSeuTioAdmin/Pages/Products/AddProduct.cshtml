@@ -4,22 +4,46 @@
 	<h1>Adicionar um produto</h1>
 	<hr />
 }
-<form method="post">
-	<div>
-		<label asp-for="NomeProduto">Nome</label>
-		<input asp-for="NomeProduto" class="form-control"/>
-		<label asp-for="PrecoProduto">Preço</label>
-		<input asp-for="PrecoProduto" type="number" class="form-control" />
-		<label asp-for="QuantidadeProduto">Quantidade</label>
-		<input asp-for="QuantidadeProduto" type="number" class="form-control" />
-		<label asp-for="DescricaoProduto">Descrição</label>
-		<input asp-for="DescricaoProduto" type="text" class="form-control" />
-	</div>
-	<hr />
-	<button type="submit" class="btn btn-primary">Adicionar Produto</button>
-</form>
-@if (Model.NomeProduto != null) {
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+            @*<div asp-validation-summary="All"></div>*@
+                <div class="mb-3">
+                    <label asp-for="newProduct.Name">Name</label>
+                    <input asp-for="newProduct.Name" class="form-control" />
+                    <span asp-validation-for="newProduct.Name"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="newProduct.ShortDescription">ShortDescription</label>
+                    <input asp-for="newProduct.ShortDescription" class="form-control" />
+                    <span asp-validation-for="newProduct.ShortDescription"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="newProduct.Description">Description</label>
+                    <textarea asp-for="newProduct.Description" class="form-control"></textarea>
+                    <span asp-validation-for="newProduct.Description"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="newProduct.Price">Price</label>
+                    <input asp-for="newProduct.Price" class="form-control" />
+                    <span asp-validation-for="newProduct.Price"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="newProduct.Category">Category</label>
+                    <select asp-for="newProduct.Category" class="form-control">
+                        <option value="Beverage">Beverage</option>
+                        <option value="Food">Food</option>
+                    </select>
+                </div>
+                <button class="btn btn-success">Create</button>
+            </form>
+        </div>
+    </div>
+
+@*
+    @if (Model.NomeProduto != null) {
 	<div class="alert-success mt-3">
 		<p>Produto @Model.NomeProduto Cadastrado com Sucesso!</p>
 	</div>
 }
+*@

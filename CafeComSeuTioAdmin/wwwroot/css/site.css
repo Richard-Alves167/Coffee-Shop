@@ -14,6 +14,10 @@ body {
     background-size: cover;
 }
 
+nav {
+    background-color: #3b2203;
+}
+
 footer {
     padding: 25px;
     background-color: #3b2203;
