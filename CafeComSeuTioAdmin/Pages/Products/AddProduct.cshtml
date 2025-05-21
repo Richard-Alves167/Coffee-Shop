@@ -6,7 +6,7 @@
 }
     <div class="row">
         <div class="col-md-6">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
             @*<div asp-validation-summary="All"></div>*@
                 <div class="mb-3">
                     <label asp-for="newProduct.Name">Name</label>
@@ -27,6 +27,10 @@
                     <label asp-for="newProduct.Price">Price</label>
                     <input asp-for="newProduct.Price" class="form-control" />
                     <span asp-validation-for="newProduct.Price"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="newProduct.Upload">Upload</label>
+                    <input asp-for="newProduct.Upload" class="form-control" />
                 </div>
                 <div class="mb-3">
                     <label asp-for="newProduct.Category">Category</label>

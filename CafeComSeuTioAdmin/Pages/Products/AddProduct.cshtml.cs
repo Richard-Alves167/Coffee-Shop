@@ -8,40 +8,35 @@ namespace CafeComSeuTioAdmin.Pages.Products
     public class AddProductModel : PageModel
     {
         private CafeContext cafeContext;
+
+        private IWebHostEnvironment webEnv;
+
         [BindProperty]
         public Product newProduct { get; set; }
 
-        public AddProductModel(CafeContext context) {
+        public AddProductModel(CafeContext context, IWebHostEnvironment webEnv) {
             this.cafeContext = context;
+            this.webEnv = webEnv;
         }
 
         public void OnGet() {
         }
 
-        public void OnPost() {
+        public async Task<IActionResult> OnPost() {
             if (ModelState.IsValid) {
+                if (newProduct.Upload is not null) {
+                    newProduct.ImageFileName = newProduct.Upload.FileName;
+                    var file = Path.Combine(webEnv.ContentRootPath, "wwwroot/images/menu", newProduct.ImageFileName);
+
+                    using (var fileStream = new FileStream(file, FileMode.Create)) {
+                        await newProduct.Upload.CopyToAsync(fileStream);
+                    }
+                }
                 cafeContext.Add<Product>(newProduct);
                 cafeContext.SaveChanges();
-
-                /*
-                var filename = $"Produtos.txt";
-                var caminho = Path.Combine("wwwroot/files", filename);
-                var productName = newProduct.Name;
-                var productShortDescription = newProduct.ShortDescription;
-                var productDescription = newProduct.Description;
-                var productPrice = newProduct.Price;
-                var productCategory = newProduct.Category;
-
-                using (StreamWriter escrever = new StreamWriter(caminho, true)) {
-                    escrever.WriteLine($"{productName},{productShortDescription},{productDescription},{productPrice},{productCategory}");
-                    //escrever.WriteLine("Nome do Produto: " + productName);
-                    //escrever.WriteLine("Descrição pequena do Produto: " + productShortDescription);
-                    //escrever.WriteLine("Descrição do Produto: " + productDescription);
-                    //escrever.WriteLine("Preço do Produto: " + productPrice);
-                    //escrever.WriteLine("Categoria do Produto: " + productCategory);
-                }
-                */
             }
+
+            return RedirectToPage("ViewAllProducts",new { id = newProduct.Id });
         }
     }
 }

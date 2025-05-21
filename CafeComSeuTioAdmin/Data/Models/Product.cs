@@ -49,6 +49,7 @@ namespace CafeComSeuTioAdmin.Data
         public decimal Price { get; set; }
 
         public string ImageFile { get; set; }
+        public string ImageFileName { get; set; }
 
         [Required]
         public DateTime Created { get; set; }
