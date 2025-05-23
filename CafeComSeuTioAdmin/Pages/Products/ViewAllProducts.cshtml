@@ -5,6 +5,7 @@
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
+				<td>Imagem</td>
 				<td>Nome</td>
 				<td>Pequena Descrição</td>
 				<td>Descrição</td>
@@ -16,11 +17,13 @@
 		@foreach (var produto in Model.ListaProduto)
 		{
 			<tr>
+				<td><img src="~/images/cup.png" /></td>
 				<td>@produto.Name</td>
 				<td>@produto.ShortDescription</td>
 				<td>@produto.Description</td>
 				<td>R$ @produto.Price</td>
 				<td>@produto.Category</td>
+				<td>editar</td>
 			</tr>
 		}
 	</table>

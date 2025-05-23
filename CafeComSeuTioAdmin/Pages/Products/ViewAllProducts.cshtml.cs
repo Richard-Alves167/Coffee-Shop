@@ -7,15 +7,21 @@ namespace CafeComSeuTioAdmin.Pages.Products
 {
     public class ViewAllProductsModel : PageModel
     {
+        [BindProperty]
+        public IProductRepository _productRepository { get; set; }
+
         public List<Product> ListaProduto;
         public string NomeProduto { get; set; }
         public double PrecoProduto { get; set; }
         public int QuantidadeProduto { get; set; }
         public string DescricaoProduto { get; set; }
+
+        public ViewAllProductsModel(IProductRepository productRepository) {
+            _productRepository = productRepository;
+        }
         public void OnGet()
         {
-            Product produto = new Product();
-            ListaProduto = produto.ListaProdutos();
+            ListaProduto = _productRepository.GetAll();
         }
 
         public void OnPost() {

@@ -10,6 +10,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<CafeContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
+builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
