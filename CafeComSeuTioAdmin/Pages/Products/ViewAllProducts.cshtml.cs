@@ -3,10 +3,8 @@ using CafeteriaKwai.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CafeComSeuTioAdmin.Pages.Products
-{
-    public class ViewAllProductsModel : PageModel
-    {
+namespace CafeComSeuTioAdmin.Pages.Products {
+    public class ViewAllProductsModel : PageModel {
         [BindProperty]
         public IProductRepository _productRepository { get; set; }
 
@@ -19,8 +17,7 @@ namespace CafeComSeuTioAdmin.Pages.Products
         public ViewAllProductsModel(IProductRepository productRepository) {
             _productRepository = productRepository;
         }
-        public void OnGet()
-        {
+        public void OnGet() {
             ListaProduto = _productRepository.GetAll();
         }
 

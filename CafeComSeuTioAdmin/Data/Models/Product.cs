@@ -38,11 +38,10 @@ namespace CafeComSeuTioAdmin.Data
         public string Name { get; set; }
 
         [Required]
-        [MinLength(10,ErrorMessage = "Descrição muito pequena.")]
+        [MinLength(20,ErrorMessage = "Descrição muito pequena.")]
         public string Description { get; set; }
 
         [Required]
-        [MaxLength(16, ErrorMessage = "Descrição muito grande.")]
         public string ShortDescription { get; set; }
 
         [Required]

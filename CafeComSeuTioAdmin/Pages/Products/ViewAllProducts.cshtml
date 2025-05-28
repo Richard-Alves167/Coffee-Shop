@@ -5,6 +5,7 @@
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
+				<td>Id</td>
 				<td>Imagem</td>
 				<td>Nome</td>
 				<td>Pequena Descrição</td>
@@ -17,13 +18,14 @@
 		@foreach (var produto in Model.ListaProduto)
 		{
 			<tr>
-				<td><img src="~/images/cup.png" /></td>
+				<td>@produto.Id</td>
+				<td><img src="~/images/menu/@produto.ImageFileName" /></td>
 				<td>@produto.Name</td>
 				<td>@produto.ShortDescription</td>
 				<td>@produto.Description</td>
 				<td>R$ @produto.Price</td>
 				<td>@produto.Category</td>
-				<td>editar</td>
+				<td> <a asp-page="EditProduct" asp-route-id="@produto.Id">editar</a></td>
 			</tr>
 		}
 	</table>
