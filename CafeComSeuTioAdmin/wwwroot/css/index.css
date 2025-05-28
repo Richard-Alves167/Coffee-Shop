@@ -47,6 +47,7 @@
         cursor: pointer;
         transition: 1s;
     }
+
         .nav-manual .manual-btn::after hover {
             background-color: #805734;
         }
@@ -55,10 +56,10 @@ input[type="radio"] {
     display: none;
 }
 
-    /*input[type="radio"]:not(:checked) + .manual-btn img {
+/*input[type="radio"]:not(:checked) + .manual-btn img {
         content: url(~/images/cats/xicaraVazia.png);*/
-        /*content: url(../images/cats/xicaraVazia.png);*/
-    /*}
+/*content: url(../images/cats/xicaraVazia.png);*/
+/*}
 
     input[type="radio"]:checked + .manual-btn img {
         content: url(~/images/cats/gatoNaXicara.png);
@@ -93,9 +94,11 @@ input[type="radio"] {
     .img-desktop {
         display: none;
     }
+
     .img-mobile {
         display: block;
     }
+
     .nav-auto, .nav-manual {
         margin-top: 60%;
     }
@@ -134,8 +137,80 @@ input[type="radio"] {
 
 #nossoCardapio {
     background-color: #D9D9D9;
+    justify-content: center;
+    align-content: center;
 }
 
+    #nossoCardapio div {
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    #nossoCardapio img {
+        width: 100%;
+    }
+
+    #nossoCardapio h3 {
+        font-size: 30px;
+        margin-top: -20px;
+        margin-bottom: 50px;
+        display: flex;
+        place-content: center;
+    }
+
+    #nossoCardapio ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;  
+        align-content: center;
+        justify-content: center;
+        list-style: none;
+    }
+
+    #nossoCardapio li {
+        width: 26vh;
+        height: 36vh;
+        cursor: pointer;
+    }
+
+.bannerCardapio {
+    width: 26vh;
+    height: 34vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+        #nossoCardapio li p {
+            font-size: 20px;
+            color: #D9D9D9;
+            background-color: #361F10;
+            width: 100%;
+            text-align: center;
+        }
+
+        #nossoCardapio li:hover .bannerCardapio {
+            border: 10px solid #805734;
+            border-bottom: none;
+        }
+
+#nossoCardapio li:hover p {
+    background-color: #805734;
+}
+
+#nossoCardapio li:hover .gatoEscondido {
+    display: block;
+    position: absolute;
+    margin-top: -22.2vw;
+    margin-left: -2vw;
+    border: hidden;
+    width: 200px;
+}
+
+.gatoEscondido {
+    display:none;
+}
 
 #nossaPlaylist {
     background-color: #805734;
