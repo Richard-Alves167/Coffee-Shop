@@ -1,0 +1,127 @@
+﻿section {
+    height: 100vh;
+    width: 100%;
+}
+
+.slider {
+    margin: 0;
+    width: 100%;
+    height: 75vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+    .slider-content input, .img-mobile {
+        display: none;
+    }
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+    .slide-box img {
+        width: 100%;
+    }
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 80%;
+    margin-top: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+    .nav-manual .manual-btn, .nav-auto div {
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+        .nav-manual .manual-btn::after hover {
+            background-color: #805734;
+        }
+
+input[type="radio"] {
+    display: none;
+}
+
+    /*input[type="radio"]:not(:checked) + .manual-btn img {
+        content: url(~/images/cats/xicaraVazia.png);*/
+        /*content: url(../images/cats/xicaraVazia.png);*/
+    /*}
+
+    input[type="radio"]:checked + .manual-btn img {
+        content: url(~/images/cats/gatoNaXicara.png);
+        border-color: #007bff;
+    }*/
+
+.manual-btn img {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+/*#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: #805734;
+}*/
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .segundo {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .terceiro {
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .img-desktop {
+        display: none;
+    }
+    .img-mobile {
+        display: block;
+    }
+    .nav-auto, .nav-manual {
+        margin-top: 60%;
+    }
+}
+
+#Sobre {
+    background-color: #805734;
+}
+
+
+#nossoCardapio {
+    background-color: #D9D9D9;
+}
+
+
+#nossaPlaylist {
+    background-color: #805734;
+}
+
+
+#novidades {
+    background-color: #533737;
+    opacity: 0.8;
+}
+
+
+#contato {
+    background-color: #805734;
+}

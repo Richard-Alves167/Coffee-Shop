@@ -12,26 +12,35 @@ body {
     margin-bottom: 60px;
     background: url("../images/download.gif");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 nav {
-    background-color: #3b2203;
+    background-color: #471B00;
 }
 
 footer {
     padding: 25px;
-    background-color: #3b2203;
+    background-color: #471B00;
     color: white;
 }
 
 main {
     min-height: 1000px;
-    background-color: #fff;
-    padding: 25px;
+}
+
+#logoTop {
+    max-width: 80px;
 }
 
 #logo {
     max-width: 150px;
+}
+
+.centralizer {
+    display: flex;
+    align-items: center;
 }
 
 .menu-items img {

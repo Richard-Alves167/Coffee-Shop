@@ -3,38 +3,179 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<section class="slider">
+    <div class="slider-content">
+        <input type="radio" name="btn-radio" id="radio1" />
+        <input type="radio" name="btn-radio" id="radio2" />
+        <input type="radio" name="btn-radio" id="radio3" />
 
-<div class="container-fluid dashboard">
-    <h1 class="h2">Welcome to Cafe Com Seu Tio!</h1>
-    <hr />
-    <div class="row">
-        <div class="col-md-6">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <td>Question</td>
-                        <td>Answer</td>
-                    </tr>
-                </thead>
-                @foreach (var item in Model.listSurvey) {
-                    <tr>
-                        <td>@item.Question</td>
-                        <td>@item.Answer</td>
-                    </tr>
-                }
+        <div class="slide-box primeiro"> 
+            <img class="img-desktop" src="~/images/bannerCarrossel1.jpg" alt="slide 1"/>
+            <img class="img-mobile" src="~/images/bannerCarrossel1.jpg" alt="slide 1" />
+        </div>
+        <div class="slide-box segundo"> 
+            <img class="img-desktop" src="~/images/bannerCarrossel2.webp" alt="slide 2" />
+            <img class="img-mobile" src="~/images/bannerCarrossel2.webp" alt="slide 2" />
+        </div>
+        <div class="slide-box terceiro">
+            <img class="img-desktop" src="~/images/bannerCarrossel3.jpg" alt="slide 3" />
+            <img class="img-mobile" src="~/images/bannerCarrossel3.jpg" alt="slide 3" />
+        </div>
+
+        <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+        </div>
+
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio1" /></label>
+            <label for="radio2" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio2" /></label>
+            <label for="radio3" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio3" /></label>
+        </div>
+    </div>
+</section>
+<section id="Sobre">
+    <img />
+    <div>
+        <h2>Café Kwai</h2>
+        <p> Um cantinho aconchegante onde o aroma do café recém-passado se mistura com o charme felino. Inspirada no universo dos gatos — independentes, curiosos e carinhosos na medida certa — nossa cafeteria foi criada para ser um refúgio tranquilo no seu dia, como o colo quentinho que um gatinho procura ao entardecer.</p>
+    </div>
+</section>
+<section id="nossoCardapio">
+    <div></div>
+    <h3>Nosso Cardápio</h3>
+    <div>
+        <ul>
+            <li>
+                <img />
+                <img />
+                <p>Bebidas</p>
+            </li>
+            <li>
+                <img />
+                <img />
+                <p>Sobremesas</p>
+            </li>
+            <li>
+                <img />
+                <img />
+                <p>Kits de Café</p>
+            </li>
+            <li>
+                <img />
+                <img />
+                <p>Outros</p>
+            </li>
+        </ul>
+    </div>
+    <div></div>
+</section>
+<section id="nossaPlaylist">
+    <h2>Nossa Playlist</h2>
+    <div>
+        <div>
+            <h6>Playlist</h6>
+            <table>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
+                <tr>
+                    <td><img /></td>
+                    <td>Beatles - Aleison</td>
+                </tr>
             </table>
         </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    Request Help
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Contact our IT Team</h5>
-                    <p class="card-text">Having an issue with the site? Let us know!</p>
-                    <a asp-page="help" class="btn btn-success">Request Help</a>
-                </div>
+        <div></div>
+    </div>
+</section>
+<section id="novidades">
+    <h2>Novidades</h2>
+    <div>
+        <div>
+            <div>
+                <img/>
+                <span>Café Bom D+</span>
+            </div>
+            <div>
+                <h6>Café Bom D+</h6>
+				<span>R$ 9,99</span>
+				<p>Um café encorpado</p>
+				<p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img />
+                <span>Café Bom D+</span>
+            </div>
+            <div>
+                <h6>Café Bom D+</h6>
+                <span>R$ 9,99</span>
+                <p>Um café encorpado</p>
+                <p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img />
+                <span>Café Bom D+</span>
+            </div>
+            <div>
+                <h6>Café Bom D+</h6>
+                <span>R$ 9,99</span>
+                <p>Um café encorpado</p>
+                <p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
             </div>
         </div>
     </div>
-</div>
+</section>
+<section id="contato">
+    <h2>Contato</h2>
+    <div>
+        <div>
+            <div>
+                <input type="text" name="name" value="" placeholder="Nome"/>
+            <input type="email" name="name" value="" placeholder="E-mail"/>
+            <input type="number" name="name" value="" placeholder="Telefone"/>
+			    <button>Enviar</button>
+            </div>
+            <div>
+            <input type="text" name="name" value="" placeholder="Escreva sua mensagem aqui"/>
+            </div>
+        </div>
+        <div>
+            <span>Rua São Bernardo dos Coitacazes n° 123</span>
+		    <img />
+            <span>Segunda à Sexta - 06hrs - 19hrs</span>
+            <span>Sábado, Domingo e Feriados - 10hrs - 17hrs</span>
+        </div>
+    </div>
+</section>
+            @* <div class="card"> *@
+            @*     <div class="card-header"> *@
+            @*         Request Help *@
+            @*     </div> *@
+            @*     <div class="card-body"> *@
+            @*         <h5 class="card-title">Contact our IT Team</h5> *@
+            @*         <p class="card-text">Having an issue with the site? Let us know!</p> *@
+            @*         <a asp-page="help" class="btn btn-success">Request Help</a> *@
+            @*     </div> *@
+            @* </div> *@
