@@ -202,8 +202,8 @@ input[type="radio"] {
 #nossoCardapio li:hover .gatoEscondido {
     display: block;
     position: absolute;
-    margin-top: -22.2vw;
-    margin-left: -2vw;
+    margin-top: -142px;
+    margin-left: -14px;
     border: hidden;
     width: 200px;
 }
@@ -217,6 +217,8 @@ input[type="radio"] {
 }
 
 
+
+
 #novidades {
     background-color: #533737;
     opacity: 0.8;
@@ -225,4 +227,80 @@ input[type="radio"] {
 
 #contato {
     background-color: #805734;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
+
+    #contato h2 {
+        font-size: 48px;
+        color: #D9D9D9;
+    }
+
+#sectionContato {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#enviarEmail {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+    #enviarEmail div {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #enviarEmail button {
+        width: 200px;
+        height: 50px;
+        color: #D9D9D9;
+        background-color: #361F10;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+.smallInput {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.largeInput {
+    width: 160px;
+    height: 350px;
+    border-radius: 10px;
+    text-align: left;
+    text-align: start;
+    text-align-last: start;
+}
+
+#localizacao {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+    #localizacao img {
+        width: 70%;
+    }
+
+    #localizacao span {
+        font-size: 14px;
+        color: #D9D9D9;
+        text-align: center;
+    }
