@@ -19,6 +19,13 @@ namespace CafeteriaKwai.Data {
             return _context.Products.ToList();
         }
 
+        List<Product> IProductRepository.GetAllFilter() {
+            return _context.Products.Where(x => x.Deleted == false).ToList();
+        }
+        List<Product> IProductRepository.GetAllDeleted() {
+            return _context.Products.Where(x => x.Deleted == true).ToList();
+        }
+
         Product IProductRepository.GetById(int id) {
             return _context.Products.Find(id);
         }

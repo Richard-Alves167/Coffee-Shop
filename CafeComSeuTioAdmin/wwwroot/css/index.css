@@ -57,12 +57,12 @@ input[type="radio"] {
 }
 
 /*input[type="radio"]:not(:checked) + .manual-btn img {
-        content: url(~/images/cats/xicaraVazia.png);*/
+        content: url("../images/download.gif");*/
 /*content: url(../images/cats/xicaraVazia.png);*/
 /*}
 
     input[type="radio"]:checked + .manual-btn img {
-        content: url(~/images/cats/gatoNaXicara.png);
+        content: url("../images/download.gif");
         border-color: #007bff;
     }*/
 

@@ -1,0 +1,47 @@
+﻿@page "/products/edit/{id:int}"
+@model CafeteriaKwai.Pages.Products.EditProductModel
+@{
+}
+
+<h1>Editando um produto</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data">
+            @*<div asp-validation-summary="All"></div>*@
+            <div class="mb-3">
+                <label asp-for="editProduct.Name">Name</label>
+                <input asp-for="editProduct.Name" class="form-control" />
+                <span asp-validation-for="editProduct.Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="editProduct.ShortDescription">ShortDescription</label>
+                <input asp-for="editProduct.ShortDescription" class="form-control" />
+                <span asp-validation-for="editProduct.ShortDescription"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="editProduct.Description">Description</label>
+                <textarea asp-for="editProduct.Description" class="form-control"></textarea>
+                <span asp-validation-for="editProduct.Description"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="editProduct.Price">Price</label>
+                <input asp-for="editProduct.Price" class="form-control" />
+                <span asp-validation-for="editProduct.Price"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="editProduct.Upload">Upload</label>
+                <input asp-for="editProduct.Upload" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="editProduct.Category">Category</label>
+                <select asp-for="editProduct.Category" class="form-control">
+                    <option value="Beverage">Beverage</option>
+                    <option value="Food">Food</option>
+                </select>
+            </div>
+            <button class="btn btn-success">Create</button>
+        </form>
+    </div>
+</div>
