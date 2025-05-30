@@ -9,5 +9,6 @@ namespace CafeteriaKwai.Data {
         public List<Product> GetAllDeleted();
         public void Update(Product product);
         public void Delete(int id);
+        public void LogicalDelete(int id);
     }
 }

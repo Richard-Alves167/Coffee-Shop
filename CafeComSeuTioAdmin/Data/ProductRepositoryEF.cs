@@ -9,10 +9,18 @@ namespace CafeteriaKwai.Data {
         }
 
         void IProductRepository.Add(Product produto) {
-            //_context.Products.Add(produto);
+            _context.Products.Add(produto);
         }
         void IProductRepository.Delete(int id) {
-            //_context.Products.Remove(id);
+            var deletedItem = _context.Products.Where(p => p.Id == id).FirstOrDefault();
+            _context.Products.Remove(deletedItem);
+            _context.SaveChanges();
+        }
+        void IProductRepository.LogicalDelete(int id) {
+            var deletedLogicalItem = _context.Products.First(p => p.Id == id);
+            deletedLogicalItem.Deleted = true;
+            _context.Products.Update(deletedLogicalItem);
+            _context.SaveChanges();
         }
 
         List<Product> IProductRepository.GetAll() {
@@ -27,11 +35,12 @@ namespace CafeteriaKwai.Data {
         }
 
         Product IProductRepository.GetById(int id) {
-            return _context.Products.Find(id);
+            return _context.Products.First(p => p.Id == id);
         }
 
         void IProductRepository.Update(Product product) {
-            //_context.Products.Update(product);
+            _context.Products.Update(product);
+            _context.SaveChanges();
         }
     }
 }

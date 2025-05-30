@@ -31,6 +31,11 @@
                 <span asp-validation-for="editProduct.Price"></span>
             </div>
             <div class="mb-3">
+                <label asp-for="editProduct.ImageFileName">Price</label>
+                <input asp-for="editProduct.ImageFileName" class="form-control" />
+                <span asp-validation-for="editProduct.ImageFileName"></span>
+            </div>
+            <div class="mb-3">
                 <label asp-for="editProduct.Upload">Upload</label>
                 <input asp-for="editProduct.Upload" class="form-control" />
             </div>
@@ -41,7 +46,8 @@
                     <option value="Food">Food</option>
                 </select>
             </div>
-            <button class="btn btn-success">Create</button>
+            <button asp-page-handler="edit" class="btn btn-success">Submit</button>
+            <button asp-page-handler="edit" class="btn btn-danger float-end">Delete</button>
         </form>
     </div>
 </div>

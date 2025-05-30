@@ -14,9 +14,9 @@ namespace CafeteriaKwai.Pages.Products
 
         [BindProperty]
         public Product editProduct { get; set; }
-        
-        //[FromRoute]
-        public int id;
+
+        [FromRoute]
+        public int id { get; set; }
 
         public List<Product> Products { get; set; }
 
@@ -27,24 +27,21 @@ namespace CafeteriaKwai.Pages.Products
         }
 
         public void OnGet() {
+            editProduct = _productRepository.GetById(id);
             Products = _productRepository.GetAll();
         }
 
-        public async Task<IActionResult> OnPost() {
-            if (ModelState.IsValid) {
-                if (editProduct.Upload is not null) {
-                    editProduct.ImageFileName = editProduct.Upload.FileName;
-                    var file = Path.Combine(webEnv.ContentRootPath, "wwwroot/images/menu", editProduct.ImageFileName);
+        public async Task<IActionResult> OnPostEdit() {
+            editProduct.Id = id;
+            editProduct.Created = DateTime.Now;
 
-                    using (var fileStream = new FileStream(file, FileMode.Create)) {
-                        await editProduct.Upload.CopyToAsync(fileStream);
-                    }
-                }
-                //cafeContext.Add<Product>(editProduct);
-                // cafeContext.SaveChanges();
-                _productRepository.Add(editProduct);
-            }
+            editProduct.Deleted = false;
 
+            _productRepository.Update(editProduct);
+            return RedirectToPage("ViewAllProducts", new { id = editProduct.Id });
+        }
+        public async Task<IActionResult> OnPostDelete() {
+            _productRepository.LogicalDelete(id);
             return RedirectToPage("ViewAllProducts", new { id = editProduct.Id });
         }
     }

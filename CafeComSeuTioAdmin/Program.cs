@@ -12,6 +12,7 @@ builder.Services.AddDbContext<CafeContext>(
 
 builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
