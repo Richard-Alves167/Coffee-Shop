@@ -21,8 +21,8 @@ namespace CafeComSeuTioAdmin.Pages.Products {
         }
         public void OnGet() {
             ListaProduto = _productRepository.GetAll();
-            ListaProdutoFiltrado = _productRepository.GetAllFilter();
-            ListaProdutoDeletado = _productRepository.GetAllDeleted();
+            //ListaProdutoFiltrado = _productRepository.GetAllFilter();
+            //ListaProdutoDeletado = _productRepository.GetAllDeleted();
         }
 
         public void OnPost() {
