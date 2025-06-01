@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
     background: url("../images/download.gif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,7 +26,6 @@ footer {
 }
 
 main {
-    min-height: 1000px;
 }
 
 #logoTop {
