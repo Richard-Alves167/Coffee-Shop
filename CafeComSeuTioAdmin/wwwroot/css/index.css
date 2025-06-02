@@ -163,7 +163,7 @@ input[type="radio"] {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;  
+        gap: 40px;
         align-content: center;
         justify-content: center;
         list-style: none;
@@ -182,18 +182,18 @@ input[type="radio"] {
     border-top-right-radius: 10px;
 }
 
-        #nossoCardapio li p {
-            font-size: 20px;
-            color: #D9D9D9;
-            background-color: #361F10;
-            width: 100%;
-            text-align: center;
-        }
+#nossoCardapio li p {
+    font-size: 20px;
+    color: #D9D9D9;
+    background-color: #361F10;
+    width: 100%;
+    text-align: center;
+}
 
-        #nossoCardapio li:hover .bannerCardapio {
-            border: 10px solid #805734;
-            border-bottom: none;
-        }
+#nossoCardapio li:hover .bannerCardapio {
+    border: 10px solid #805734;
+    border-bottom: none;
+}
 
 #nossoCardapio li:hover p {
     background-color: #805734;
@@ -209,21 +209,135 @@ input[type="radio"] {
 }
 
 .gatoEscondido {
-    display:none;
+    display: none;
 }
 
 #nossaPlaylist {
     background-color: #805734;
 }
 
-
-
-
 #novidades {
     background-color: #533737;
     opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
+    #novidades h2 {
+        font-size: 48px;
+        color: #D9D9D9;
+    }
+
+#sectionCards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 18vw;
+    height: 26vw;
+    perspective: 1000px;
+    margin: 20px;
+    background: none;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #6b4e3d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .card-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+.card-back {
+    background-color: #805734;
+    color: black;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cardName {
+    font-size: 3.2vh;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+}
+
+.cardPrice {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #EEEDED;
+    margin: 0;
+}
+
+.cardShortDescription {
+    font-size: 2vh;
+    font-weight: bold;
+    color: #F9B997;
+    margin: 0;
+}
+
+.cardDescription {
+    font-size: 2vh;
+    color: #D7D6D6;
+    height: 40%;
+    overflow: auto;
+    margin: 0;
+}
+    .cardDescription::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .cardDescription::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    .cardDescription::-webkit-scrollbar-thumb {
+        background: #533737;
+        border-radius: 4px;
+        border: 1px solid #F9B997;
+    }
 
 #contato {
     background-color: #805734;

@@ -49,17 +49,17 @@
 	<h3>Nosso Cardápio</h3>
 	<ul>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel1.png" class="gatoEscondido"/>
+			<img src="~/images/cats/gatinhoPorCimaDePainel1.png" class="gatoEscondido" />
 			<img src="~/images/bannerCardapioBedidas.jpg" class="bannerCardapio" />
 			<p>Bebidas</p>
 		</li>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel2.png" class="gatoEscondido"/>
+			<img src="~/images/cats/gatinhoPorCimaDePainel2.png" class="gatoEscondido" />
 			<img src="~/images/bannerCardapioSobremesas.jpg" class="bannerCardapio" />
 			<p>Sobremesas</p>
 		</li>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel3.png" class="gatoEscondido"/>
+			<img src="~/images/cats/gatinhoPorCimaDePainel3.png" class="gatoEscondido" />
 			<img src="~/images/bannerCardapioKits.jpg" class="bannerCardapio" />
 			<p>Kits de Café</p>
 		</li>
@@ -108,41 +108,47 @@
 </section>
 <section id="novidades">
 	<h2>Novidades</h2>
-	<div>
-		<div>
-			<div>
-				<img />
-				<span>Café Bom D+</span>
-			</div>
-			<div>
-				<h6>Café Bom D+</h6>
-				<span>R$ 9,99</span>
-				<p>Um café encorpado</p>
-				<p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
-			</div>
-		</div>
-		<div>
-			<div>
-				<img />
-				<span>Café Bom D+</span>
-			</div>
-			<div>
-				<h6>Café Bom D+</h6>
-				<span>R$ 9,99</span>
-				<p>Um café encorpado</p>
-				<p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
+	<div id="sectionCards">
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="./images/menu/sobresema1.jpg" alt="Café Bom D+" />
+					<h3 class="cardName">@Model.ProdutoNovidade1.Name</h3>
+				</div>
+				<div class="card-back">
+					<h3 class="cardName">@Model.ProdutoNovidade1.Name</h3>
+					<p class="cardPrice">Price: R$@Model.ProdutoNovidade1.Price</p>
+					<p class="cardShortDescription">@Model.ProdutoNovidade1.ShortDescription</p>
+					<p class="cardDescription">@Model.ProdutoNovidade1.Description</p>
+				</div>
 			</div>
 		</div>
-		<div>
-			<div>
-				<img />
-				<span>Café Bom D+</span>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="./images/menu/sobremesa2.webp" alt="Café Bom D+" />
+					<h3 class="cardName">@Model.ProdutoNovidade2.Name</h3>
+				</div>
+				<div class="card-back">
+					<h3 class="cardName">@Model.ProdutoNovidade2.Name</h3>
+					<p class="cardPrice">Price: R$@Model.ProdutoNovidade2.Price</p>
+					<p class="cardShortDescription">@Model.ProdutoNovidade2.ShortDescription</p>
+					<p class="cardDescription">@Model.ProdutoNovidade2.Description</p>
+				</div>
 			</div>
-			<div>
-				<h6>Café Bom D+</h6>
-				<span>R$ 9,99</span>
-				<p>Um café encorpado</p>
-				<p>Aprecie o sabor intenso do nosso Café Bom D+, uma mistura perfeita de grãos selecionados que trazem o melhor do café para a sua xícara. Ideal para começar o dia com energia!</p>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="./images/menu/sobremesa3.jpg" alt="Café Bom D+" />
+					<h3 class="cardName">@Model.ProdutoNovidade3.Name</h3>
+				</div>
+				<div class="card-back">
+					<h3 class="cardName">@Model.ProdutoNovidade3.Name</h3>
+					<p class="cardPrice">Price: R$@Model.ProdutoNovidade3.Price</p>
+					<p class="cardShortDescription">@Model.ProdutoNovidade3.ShortDescription</p>
+					<p class="cardDescription">@Model.ProdutoNovidade3.Description</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -152,7 +158,7 @@
 	<div id="sectionContato">
 		<div id="enviarEmail">
 			<div>
-				<input type="text" name="name" value="" placeholder="Nome" class="smallInput"/>
+				<input type="text" name="name" value="" placeholder="Nome" class="smallInput" />
 				<input type="email" name="name" value="" placeholder="E-mail" class="smallInput" />
 				<input type="number" name="name" value="" placeholder="Telefone" class="smallInput" />
 				<button>Enviar</button>
@@ -163,7 +169,7 @@
 		</div>
 		<div id="localizacao">
 			<span>Rua São Bernardo dos Coitacazes n° 123</span>
-			<img src="~/images/googleMaps.jpg"/>
+			<img src="~/images/googleMaps.jpg" />
 			<span>Segunda à Sexta - 06hrs - 19hrs</span>
 			<span>Sábado, Domingo e Feriados - 10hrs - 17hrs</span>
 		</div>

@@ -7,6 +7,8 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using CafeComSeuTioAdmin.Data.Models;
+using CafeteriaKwai.Data;
+using CafeComSeuTioAdmin.Data;
 
 namespace CafeComSeuTioAdmin.Pages
 {
@@ -16,15 +18,30 @@ namespace CafeComSeuTioAdmin.Pages
 
         public List<SurveyItem> listSurvey;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public CafeContext CafeContext { get; set; }
+        public IProductRepository ProductRepository { get; set; }
+
+        [BindProperty]
+        public List<Product> listaProdutos { get; set; }
+        public Product ProdutoNovidade1 { get; set; }
+        public Product ProdutoNovidade2 { get; set; }
+        public Product ProdutoNovidade3 { get; set; }
+
+
+        public IndexModel(ILogger<IndexModel> logger, IProductRepository productRepository)
         {
             _logger = logger;
+            ProductRepository = productRepository;
         }
 
         public void OnGet()
         {
             var json = System.IO.File.ReadAllText(Path.Combine("wwwroot/SampleData/survey.json"));
             listSurvey = JsonSerializer.Deserialize<List<SurveyItem>>(json);
+            listaProdutos = ProductRepository.GetAll().ToList();
+            ProdutoNovidade1 = listaProdutos[listaProdutos.Count - 1];
+            ProdutoNovidade2 = listaProdutos[listaProdutos.Count - 2];
+            ProdutoNovidade3 = listaProdutos[listaProdutos.Count - 3];
         }
     }
 }
