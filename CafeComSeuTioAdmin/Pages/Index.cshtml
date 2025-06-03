@@ -108,7 +108,7 @@
 <section id="novidades">
 	<h2>Novidades</h2>
 	<div id="sectionCards">
-		<div class="card">
+		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade1.Id" class="card">
 			<div class="card-inner">
 				<div class="card-front">
 					<img src="./images/menu/sobresema1.jpg" alt="Café Bom D+" />
@@ -121,8 +121,8 @@
 					<p class="cardDescription">@Model.ProdutoNovidade1.Description</p>
 				</div>
 			</div>
-		</div>
-		<div class="card">
+		</a>
+		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade2.Id" class="card">
 			<div class="card-inner">
 				<div class="card-front">
 					<img src="./images/menu/sobremesa2.webp" alt="Café Bom D+" />
@@ -135,8 +135,8 @@
 					<p class="cardDescription">@Model.ProdutoNovidade2.Description</p>
 				</div>
 			</div>
-		</div>
-		<div class="card">
+		</a>
+		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade3.Id" class="card">
 			<div class="card-inner">
 				<div class="card-front">
 					<img src="./images/menu/sobremesa3.jpg" alt="Café Bom D+" />
@@ -149,7 +149,7 @@
 					<p class="cardDescription">@Model.ProdutoNovidade3.Description</p>
 				</div>
 			</div>
-		</div>
+		</a>
 	</div>
 </section>
 <section id="contato">

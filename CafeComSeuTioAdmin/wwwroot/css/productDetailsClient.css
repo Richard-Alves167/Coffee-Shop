@@ -1,0 +1,30 @@
+﻿﻿#Sobre {
+    background-color: #805734;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+#Sobre img {
+    width: 40%;
+}
+
+#Sobre div {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+    #Sobre div img {
+        width: 200px;
+    }
+
+#Sobre p {
+    font-size: 26px;
+    color: #D9D9D9;
+    margin-right: 50px;
+}
