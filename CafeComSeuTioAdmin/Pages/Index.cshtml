@@ -45,7 +45,7 @@
 	</div>
 </section>
 <section id="nossoCardapio">
-	<div><img src="~/images/patasGatoPDireita.png" /></div>
+	<div><img src="~/images/patasGatoPDireitaMovimento.gif" /></div>
 	<h3>Nosso Cardápio</h3>
 	<ul>
 		<li>
@@ -69,39 +69,38 @@
 			<p>Outros</p>
 		</li>
 	</ul>
-	<div><img src="~/images/patasGatoPEsquerda.png" /></div>
+	<div><img src="~/images/patasGatoPEsquerdaMovimento.gif" /></div>
 </section>
 <section id="nossaPlaylist">
-	<h2>Nossa Playlist</h2>
-	<div>
-		<div>
-			<h6>Playlist</h6>
-			<table>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-				<tr>
-					<td><img /></td>
-					<td>Beatles - Aleison</td>
-				</tr>
-			</table>
+	<h1>Nossa Playlist</h1>
+	<div id="playlistEPlayer">
+		<div class="playlist-box">
+			<h3>Playlist</h3>
+			<ul class="playlist">
+				<li id="listaMusicaTocando">
+					<img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span><img class="gifMusicaPlaylistTocando" src="./images/ondasAudio.gif" />
+				</li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+				<li><img class="imagemMusicaPlaylist" src="./images/cats/pataGatoPreto.png"><span>Beatles - Nirvana</span></li>
+			</ul>
+		</div>
+		<div class="player-box">
+			<div class="player">
+				<img class="cover" src="~/images/cats/ab.gif" alt="Cat Lo-Fi" />
+				<div class="song-info">Beatles - abcde</div>
+				<div class="controls">
+					<button><img class="controlesPlayer" src="./images/previus-button.png"></button>
+					<button><img class="controlesPlayerPrincipal" src="./images/cats/gatoAudioContinuo.gif"></button>
+					<button><img class="controlesPlayer" src="./images/next-button.png"></button>
+					<button><img class="controlesPlayer" src="./images/sound.png"></button>
+				</div>
+				<input type="range" class="progress-bar" value="30" />
+			</div>
 		</div>
 		<div></div>
 	</div>

@@ -213,7 +213,150 @@ input[type="radio"] {
 }
 
 #nossaPlaylist {
-    background-color: #805734;
+    background-color: #4E342E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+    #nossaPlaylist h1 {
+        font-size: 48px;
+        color: #F5F5F5;
+        align-self: center;
+    }
+
+#playlistEPlayer {
+    display: flex;
+    flex-direction: row;
+    align-items: anchor-center;
+}
+
+.playlist-box {
+    background-color: #6D4C41;
+    padding: 20px;
+    border-radius: 16px;
+    width: 50%;
+    padding-inline: 30px;
+    height: 80vh;
+    padding-inline: 30px;
+    margin-inline: 30px;
+}
+
+    .playlist-box h3 {
+        text-align: center;
+        background: black;
+        padding: 6px;
+        border-radius: 20px;
+        color: #81C784;
+    }
+    
+.playlist {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    overflow: auto;
+    height: 80%;
+}
+    .playlist::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .playlist::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    .playlist::-webkit-scrollbar-thumb {
+        background: #533737;
+        border-radius: 4px;
+        border: 1px solid #F9B997;
+    }
+
+    .playlist li {
+        background: #8D6E63;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+        .playlist li:hover {
+            background: #5B4646;
+            border: 2px solid #4C311F;
+        }
+
+    .playlist span {
+        width: 100%;
+        padding-left: 30px;
+        color: #FFF8E1;
+    }
+
+#listaMusicaTocando {
+    background: #5B4646;
+    border: 2px solid #4C311F;
+}
+
+.imagemMusicaPlaylist {
+    width: 50px;
+}
+
+.gifMusicaPlaylistTocando {
+    width: 35px;
+}
+
+.player-box {
+    text-align: center;
+    width: 50%;
+    align-content: center;
+    padding-inline: 30px;
+}
+
+.player {
+    background-color: #6D4C41;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.cover {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.song-info {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFB74D;
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+    .controls button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 10px;
+        color: white;
+    }
+
+.controlesPlayer {
+    width: 20px;
+}
+
+.controlesPlayerPrincipal {
+    width: 25px
+}
+
+.progress-bar {
+    width: 100%;
+    margin-top: 10px;
 }
 
 #novidades {
@@ -245,6 +388,7 @@ input[type="radio"] {
     perspective: 1000px;
     margin: 20px;
     background: none;
+    border: none;
 }
 
 .card-inner {
