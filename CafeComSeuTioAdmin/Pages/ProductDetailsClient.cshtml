@@ -3,10 +3,72 @@
 @{
 }
 <link rel="stylesheet" href="~/css/productDetailsClient.css" asp-append-version="true" />
-<section id="Sobre">
-	<img src="~/images/menu/@Model.selectProduct.ImageFileName" />
-	<div>
-		<img src="~/images/logoNomeCafeKwai.png" />
-		<p> Um cantinho aconchegante onde o aroma do café recém-passado se mistura com o charme felino. Inspirada no universo dos gatos — independentes, curiosos e carinhosos na medida certa — nossa cafeteria foi criada para ser um refúgio tranquilo no seu dia, como o colo quentinho que um gatinho procura ao entardecer.</p>
-	</div>
+<section class="product-top">
+    <img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="Bolo Holandês" class="main-image">
+    <div class="product-info">
+        <span class="avaliacao">
+			<img src="~/images/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+            <img src="~/images/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+            <img src="~/images/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+            <img src="~/images/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+            <img src="~/images/estrelaVazia.png" class="estrelaAvaliacao" alt="Estrela">
+            </span>
+        <h2 class="nameProduct">@Model.selectProduct.Name</h2>
+        <p class="subtitle">@Model.selectProduct.ShortDescription</p>
+        <hr />
+        <div class="priceLike">
+            <div class="priceArea">
+                <span class="subPrice">R$ @Model.selectProduct.Price</span>
+                <span class="price">R$ @Model.selectProduct.Price</span>
+            </div>
+            <img src="~/images/coracaoCheio.png" class="coracaoLike"/>
+        </div>
+        <div class="modificarCarrinho">
+            <div class="modificarQuantidadeProduto">
+                <button>-</button>
+                <span id="numberOfProductCart">1</span>
+                <button>+</button>
+            </div>
+            <button class="add-cart">Adicionar ao Carrinho</button>
+        </div>
+        <hr />
+        <div class=moreImages>
+            <button>&lt</button>
+            <img id="imageSelected" src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+            <button>&gt</button>
+        </div>
+    </div>
+</section>
+
+<section class="description">
+    <img src="~/images/cats/gatoComendoBolo.gif"/>
+    <div>
+        <h3>Descrição</h3>
+        <p>
+            @Model.selectProduct.Description
+        </p>
+    </div>
+</section>
+
+<section class="related-products">
+    <h3>Produtos Relacionados</h3>
+    <div class="products">
+        <div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+        <div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+        <div class="product-card"><img src="~/images/menu/granola.png"><p>Bolo de Nozes</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+        <div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+    </div>
+</section>
+
+<section class="reviews">
+    <h3>Avaliações</h3>
+    @if (true) {
+        <div>
+            <p class="no-reviews">nenhuma avaliação até o momento...</p>
+            <img src="~/images/cats/gatinhoEmDuvida.gif" alt="Gato fofo" class="cat-image">
+        </div>
+    }
 </section>

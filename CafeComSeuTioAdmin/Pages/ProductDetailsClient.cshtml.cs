@@ -15,6 +15,7 @@ namespace CafeteriaKwai.Pages
         public int id { get; set; }
 
         public Product selectProduct { get; set; }
+        //public List<Product> listaProdutosCategoria { get; set; }
 
         public ProductDetailsClientModel(IProductRepository productRepository) {
             _productRepository = productRepository;
