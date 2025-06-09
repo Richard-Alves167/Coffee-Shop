@@ -31,17 +31,16 @@
                                 <a class="nav-link" aria-current="page" asp-page="/Index"><img src="~/images/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a>
                             </li>
                             <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Products
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li><a class="dropdown-item" asp-page="/Products/ViewAllProducts">View All</a></li>
                                     <li><a class="dropdown-item" asp-page="/Products/AddProduct">Add New</a></li>
-
                                 </ul>
                             </li>
                             <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Countries
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -49,7 +48,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Cities
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -64,7 +63,61 @@
                             </li>
                         </ul>
                     </div>
+
                     <a class="navbar-brand float-right">Cafeteria Kwai</a>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navCategory">
+                            <li class="nav-item dropdown centralizer navSubCategoryHover">
+                                <a class="navCategoryLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    BEBIDAS
+                                </a>
+                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CAFÉS</a></li>
+                                    <hr />
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">CAPUCCINOS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown centralizer navSubCategoryHover">
+                                <a class="navCategoryLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    SOBREMESAS
+                                </a>
+                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CUPCAKES</a></li>
+                                    <hr />
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">TORTAS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown centralizer navSubCategoryHover">
+                                <a class="navCategoryLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    SALGADOS
+                                </a>
+                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">FORNOS</a></li>
+                                    <hr />
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">FRITOS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown centralizer navSubCategoryHover">
+                                <a class="navCategoryLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    KITS
+                                </a>
+                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">PACOTES</a></li>
+                                    <hr />
+                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">GRÃOS</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown centralizer">
+                                <a class="navCategoryLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    OUTROS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>

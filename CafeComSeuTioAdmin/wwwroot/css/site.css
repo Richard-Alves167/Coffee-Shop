@@ -19,6 +19,84 @@ nav {
     background-color: #471B00;
 }
 
+.navCategory {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.navCategoryLink {
+    color: #CC9A66;
+    font-size: 2.8vh;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+    .navCategoryLink:hover {
+        color: #CC9A66;
+        text-decoration: none;
+    }
+
+    .navCategoryLink::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #CC9A66;
+        transform-origin: bottom left;
+        transition: transform 0.25s ease-out;
+    }
+
+    .navCategoryLink:hover::after {
+        transform: scaleX(1);
+        color: #CC9A66;
+    }
+
+.navSubCategoryBox {
+    list-style: none;
+    padding-inline: 10px;
+    background-color: #D2B482;
+    border-radius: 8px;
+    position: absolute;
+    margin-bottom: -8vw;
+    margin-left: -1vh;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    display: inline-block;
+}
+
+.navSubCategoryLink {
+    color: #471B00;
+    font-weight: bold;
+}
+
+.navSubCategoryLink:hover {
+    background: none;
+}
+
+    .navSubCategoryBox hr {
+        width: 100%;
+        height: 1px;
+        background-color: #471B00;
+        opacity: 0.5;
+        margin: 0;
+    }
+
+.navSubCategoryHover:hover .navSubCategoryBox {
+    display: block;
+    transform: scaleX(1);
+}
+
+
 footer {
     padding: 25px;
     background-color: #471B00;
