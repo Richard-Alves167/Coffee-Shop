@@ -1,10 +1,12 @@
 using CafeComSeuTioAdmin.Data;
 using CafeteriaKwai.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CafeteriaKwai.Pages.Products
 {
+    [Authorize]
     public class EditProductModel : PageModel
     {
         //private CafeContext cafeContext;

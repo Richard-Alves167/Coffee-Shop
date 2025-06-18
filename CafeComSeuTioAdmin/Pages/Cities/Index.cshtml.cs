@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CafeteriaKwai.Data;
 using CafeteriaKwai.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CafeteriaKwai.Pages.Cities
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly CafeteriaKwai.Data.CafeContext _context;

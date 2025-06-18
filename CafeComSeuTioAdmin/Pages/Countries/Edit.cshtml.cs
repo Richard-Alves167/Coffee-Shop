@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CafeteriaKwai.Data;
 using CafeteriaKwai.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CafeteriaKwai.Pages.Countries
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly CafeteriaKwai.Data.CafeContext _context;

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using CafeteriaKwai.Data;
 using CafeteriaKwai.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CafeteriaKwai.Pages.Countries
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly CafeteriaKwai.Data.CafeContext _context;

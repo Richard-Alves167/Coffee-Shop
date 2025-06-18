@@ -1,4 +1,4 @@
-using CafeComSeuTioAdmin.Data;
+﻿using CafeComSeuTioAdmin.Data;
 using CafeteriaKwai.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
@@ -20,13 +20,18 @@ builder.Services.AddDefaultIdentity<IdentityUser>(
      .AddRoles<IdentityRole>()
      .AddEntityFrameworkStores<IdentidadeContext>();
 
+builder.Services.ConfigureApplicationCookie(options => {
+    options.Cookie.Name = ".Cafecom.Authentication"; ;
+    options.ExpireTimeSpan = TimeSpan.FromDays(7); // ← tempo de vida total do cookie
+    options.SlidingExpiration = true; // ← renova a expiração a cada requisição
+    options.LoginPath = "/Identity/Account/Login"; // ← opcional, se quiser definir uma página de login customizada
+});
 
 //builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 //    options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<CafeContext>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
-
 
 var app = builder.Build();
 
