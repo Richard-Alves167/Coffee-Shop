@@ -28,7 +28,7 @@ nav {
 
 .navCategoryLink {
     color: #CC9A66;
-    font-size: 2.8vh;
+    font-size: 2vh;
     font-weight: bold;
     position: relative;
     display: inline-block;
@@ -65,7 +65,7 @@ nav {
     background-color: #D2B482;
     border-radius: 8px;
     position: absolute;
-    margin-bottom: -8vw;
+    margin-bottom: -6vw;
     margin-left: -1vh;
     z-index: 1;
     transform: scaleX(0);

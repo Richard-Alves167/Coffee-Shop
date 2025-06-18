@@ -1,6 +1,7 @@
 using CafeComSeuTioAdmin.Data;
 using CafeteriaKwai.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,20 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<CafeContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
+
+builder.Services.AddDbContext<IdentidadeContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
+
+
+builder.Services.AddDefaultIdentity<IdentityUser>(
+    options => options.SignIn.RequireConfirmedAccount = true)
+     .AddRoles<IdentityRole>()
+     .AddEntityFrameworkStores<IdentidadeContext>();
+
+
+//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+//    options.SignIn.RequireConfirmedAccount = true)
+//    .AddEntityFrameworkStores<CafeContext>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
 

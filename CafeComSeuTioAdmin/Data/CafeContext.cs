@@ -1,11 +1,17 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using CafeComSeuTioAdmin.Data;
+﻿using CafeComSeuTioAdmin.Data;
 using CafeteriaKwai.Data.Models;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+ 
 namespace CafeteriaKwai.Data;
-    public class CafeContext : DbContext {
-    public CafeContext(DbContextOptions options) : base(options) { }
+public class IdentidadeContext : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext {
+    public IdentidadeContext(DbContextOptions<IdentidadeContext> options)
+        : base(options) {
+    }
+}
+public class CafeContext : DbContext {
+    public CafeContext(DbContextOptions<CafeContext> options) : base(options) { }
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductDetail> ProductDetails { get; set; }
 
