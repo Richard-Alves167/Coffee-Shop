@@ -175,6 +175,10 @@ input[type="radio"] {
         cursor: pointer;
     }
 
+    #nossoCardapio li a{
+        text-decoration: none;
+    }
+
 .bannerCardapio {
     width: 26vh;
     height: 34vh;

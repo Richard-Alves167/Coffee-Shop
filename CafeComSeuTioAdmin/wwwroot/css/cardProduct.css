@@ -1,0 +1,52 @@
+﻿.product-card {
+    width: 16vw;
+    height: 20vw;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+    .product-card img {
+        width: 100%;
+        border-radius: 8px;
+        border: 2px solid #471B00;
+    }
+
+    .product-card p {
+        color: #FFB568;
+        font-weight: bold;
+    }
+
+.cardPrecoVerMais {
+    display: flex;
+    flex-direction: row;
+    border: 4px solid #FFB568;
+    border-radius: 10px;
+    width: 100%;
+    height: 18%;
+    align-items: anchor-center;
+}
+
+.cardPreco {
+    width: 40%;
+    color: #FFB568;
+    font-size: 1.2vw;
+}
+
+.cardVerMais {
+    width: 60%;
+    height: 100%;
+    font-size: 1.5vw;
+    background-color: #FFB568;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #7D3000;
+    align-content: center;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}

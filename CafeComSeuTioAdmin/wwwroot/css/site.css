@@ -32,7 +32,6 @@ nav {
     font-weight: bold;
     position: relative;
     display: inline-block;
-    position: relative;
     text-decoration: none;
 }
 
@@ -65,12 +64,12 @@ nav {
     background-color: #D2B482;
     border-radius: 8px;
     position: absolute;
-    margin-bottom: -6vw;
+    margin-bottom: -8vw;
     margin-left: -1vh;
     z-index: 1;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
     display: inline-block;
 }
 

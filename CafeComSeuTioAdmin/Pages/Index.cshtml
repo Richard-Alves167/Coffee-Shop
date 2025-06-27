@@ -49,24 +49,39 @@
 	<h3>Nosso Cardápio</h3>
 	<ul>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel1.png" class="gatoEscondido" />
-			<img src="~/images/bannerCardapioBedidas.jpg" class="bannerCardapio" />
-			<p>Bebidas</p>
+			<a asp-page="ProductCategory" asp-route-category="Drink">
+				<img src="~/images/cats/gatinhoPorCimaDePainel1.png" class="gatoEscondido" />
+				<img src="~/images/bannerCardapioBedidas.jpg" class="bannerCardapio" />
+				<p>Bebidas</p>
+			</a>
 		</li>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel2.png" class="gatoEscondido" />
-			<img src="~/images/bannerCardapioSobremesas.jpg" class="bannerCardapio" />
-			<p>Sobremesas</p>
+			<a asp-page="ProductCategory" asp-route-category="Dessert">
+				<img src="~/images/cats/gatinhoPorCimaDePainel2.png" class="gatoEscondido" />
+				<img src="~/images/bannerCardapioSobremesas.jpg" class="bannerCardapio" />
+				<p>Sobremesas</p>
+			</a>
+		</li>
+				<li>
+			<a asp-page="ProductCategory" asp-route-category="Savory">
+				<img src="~/images/cats/gatinhoPorCimaDePainel3.png" class="gatoEscondido" />
+				<img src="~/images/bannerCardapioSalgados.jpeg" class="bannerCardapio" />
+				<p>Salgados</p>
+			</a>
 		</li>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel3.png" class="gatoEscondido" />
-			<img src="~/images/bannerCardapioKits.jpg" class="bannerCardapio" />
-			<p>Kits de Café</p>
+			<a asp-page="ProductCategory" asp-route-category="Kit">
+				<img src="~/images/cats/gatinhoPorCimaDePainel4.png" class="gatoEscondido" />
+				<img src="~/images/bannerCardapioKits.jpg" class="bannerCardapio" />
+				<p>Kits</p>
+			</a>
 		</li>
 		<li>
-			<img src="~/images/cats/gatinhoPorCimaDePainel5.png" class="gatoEscondido" />
-			<img src="~/images/bannerCardapioOutros.jpg" class="bannerCardapio" />
-			<p>Outros</p>
+			<a>
+				<img src="~/images/cats/gatinhoPorCimaDePainel5.png" class="gatoEscondido" />
+				<img src="~/images/bannerCardapioOutros.jpg" class="bannerCardapio" />
+				<p>Outros</p>
+			</a>
 		</li>
 	</ul>
 	<div><img src="~/images/patasGatoPEsquerdaMovimento.gif" /></div>
@@ -174,6 +189,7 @@
 		</div>
 	</div>
 </section>
+<script src="~/js/carrouselBanner.js" asp-append-version="true"></script>
 @* <div class="card"> *@
 @*     <div class="card-header"> *@
 @*         Request Help *@

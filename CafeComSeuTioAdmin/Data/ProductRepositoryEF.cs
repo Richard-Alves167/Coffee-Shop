@@ -26,7 +26,9 @@ namespace CafeteriaKwai.Data {
         List<Product> IProductRepository.GetAll() {
             return _context.Products.ToList();
         }
-
+        List<Product> IProductRepository.GetAllOneCategory(string category) {
+            return _context.Products.Where(p => p.Category == category && p.Deleted == false).ToList();
+        }
         List<Product> IProductRepository.GetAllFilter() {
             return _context.Products.Where(x => x.Deleted == false).ToList();
         }
