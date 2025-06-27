@@ -35,8 +35,8 @@
 
 .nav-manual, .nav-auto {
     position: absolute;
-    width: 80%;
-    margin-top: 30%;
+    width: 100%;
+    margin-top: 60vh;
     display: flex;
     justify-content: center;
 }

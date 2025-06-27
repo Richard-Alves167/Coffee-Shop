@@ -47,7 +47,7 @@
 
 .nav-manual, .nav-auto {
     position: absolute;
-    width: 50%;
+    width: 69%;
     margin-top: 24%;
     display: flex;
     justify-content: center;
@@ -140,7 +140,7 @@ input[type="radio"] {
     height: 16vh;
     position: absolute;
     margin-top: -47.4vh;
-    margin-left: -34vw;
+    margin-left: -42vw;
     transform: rotate(-14deg);
 }
 
