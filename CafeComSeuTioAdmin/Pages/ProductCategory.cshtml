@@ -5,7 +5,33 @@
 <link rel="stylesheet" href="~/css/productCategory.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/cardProduct.css" asp-append-version="true" />
 <section class="topBanner">
-	<img class="gifCategoryBanner" src="~/images/cats/gatoBebida.gif" alt="Gato Bebida" />
+	@switch (Model.category)
+	{
+		case "Drink":
+			{
+				<img class="gifCategoryBanner" src="~/images/cats/gatoBebida.gif" alt="Gato Bebida" />
+				break;
+			}
+		case "Dessert":
+			{
+				<img class="gifCategoryBanner" src="~/images/cats/gatoSobremesa.webp" alt="Gato Sobremesa" />
+				break;
+			}
+		case "Savory":
+			{
+				<img class="gifCategoryBanner" src="~/images/cats/gatoSalgado.gif" alt="Gato Salgado" />
+				break;
+			}
+		case "Kit":
+			{
+				<img class="gifCategoryBanner" src="~/images/cats/gatoKit.gif" alt="Gato Kit" />
+				break;
+			}
+			default : {
+				<img class="gifCategoryBanner" src="~/images/cats/gatoFeitoDePudim.gif" alt="Gato Pudim" />
+				break;
+			}
+	}
 	<div class="slider">
 		<div class="slider-content">
 			<input type="radio" name="btn-radio" id="radio1" />
@@ -53,7 +79,34 @@
 	<div class="divPatasGif"><img src="~/images/patasGatoPEsquerdaMovimentoTransparente.gif" /></div>
 	<h3>LANÇAMENTO</h3>
 	<div class="newProduct">
-		<img class="gifTopo" src="~/images/cats/gatoBatendoRei.gif" alt="Alternate Text" />
+		@switch (Model.category)
+		{
+			case "Drink":
+				{
+					<img class="gifTopo" src="~/images/cats/gatoBatendo1.gif" alt="Alternate Text" />
+					break;
+				}
+			case "Dessert":
+				{
+					<img class="gifTopo" src="~/images/cats/gatoBatendo2Exemplo.gif" alt="Alternate Text" />
+					break;
+				}
+			case "Savory":
+				{
+					<img class="gifTopo" src="~/images/cats/gatoBatendo3.gif" alt="Alternate Text" />
+					break;
+				}
+			case "Kit":
+				{
+					<img class="gifTopo" src="~/images/cats/gatoBatendo4.gif" alt="Alternate Text" />
+					break;
+				}
+			default:
+				{
+					<img class="gifTopo" src="~/images/cats/gatoBatendo4.gif" alt="Alternate Text" />
+					break;
+				}
+		}
 		<img class="imageProduct" src="~/images/menu/strawberries.png" alt="Alternate Text" />
 		<div class="newProductInfo">
 			<h4 class="nameProduct">Morangos Canadenses</h4>
@@ -68,7 +121,34 @@
 
 <section class="otherProductsSection">
 	<div class="divPatasGif"><img src="~/images/patasGatoPDireitaMovimentoTransparente.gif" /></div>
-	<h3>OUTRAS BEBIDAS</h3>
+	@switch (Model.category)
+	{
+		case "Drink":
+			{
+				<h3>OUTRAS BEBIDAS</h3>
+				break;
+			}
+		case "Dessert":
+			{
+				<h3>OUTRAS SOBREMESSAS</h3>
+				break;
+			}
+		case "Savory":
+			{
+				<h3>OUTROS SALGADOS</h3>
+				break;
+			}
+		case "Kit":
+			{
+				<h3>OUTROS KITS</h3>
+				break;
+			}
+		default:
+			{
+				<h3>OUTROS</h3>
+				break;
+			}
+	}
 	<div class="products">
 		<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
 		<div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
