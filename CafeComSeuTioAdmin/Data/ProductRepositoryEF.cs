@@ -1,4 +1,5 @@
-﻿using CafeComSeuTioAdmin.Data;
+﻿using System.Collections.Generic;
+using CafeComSeuTioAdmin.Data;
 
 namespace CafeteriaKwai.Data {
     public class ProductRepositoryEF : IProductRepository {
@@ -28,6 +29,12 @@ namespace CafeteriaKwai.Data {
         }
         List<Product> IProductRepository.GetAllOneCategory(string category) {
             return _context.Products.Where(p => p.Category == category && p.Deleted == false).ToList();
+        }
+        List<Product> IProductRepository.GetAllOneCategoryLimitSelected(string category,int limit) {
+            return _context.Products.Where(p => p.Category == category && p.Deleted == false).Take(limit).ToList();
+        }
+        Product IProductRepository.GetLastOneCategory(string category) {
+            return _context.Products.Where(p => p.Category == category && p.Deleted == false).OrderBy(p => p.Id).Last();
         }
         List<Product> IProductRepository.GetAllFilter() {
             return _context.Products.Where(x => x.Deleted == false).ToList();

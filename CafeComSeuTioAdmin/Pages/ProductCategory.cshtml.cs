@@ -13,10 +13,12 @@ namespace CafeteriaKwai.Pages
         }
         [FromRoute]
         public string category { get; set; }
-        public List<Product> listaCategoriaProductos { get; set; } = new List<Product>();
+        public List<Product> listaCategoriaProdutos { get; set; } = new List<Product>();
+        public Product lastProduct { get; set; } = new Product();
         public void OnGet()
         {
-            listaCategoriaProductos = _productRepository.GetAllOneCategory(category);
+            listaCategoriaProdutos = _productRepository.GetAllOneCategoryLimitSelected(category, 5);
+            lastProduct = _productRepository.GetLastOneCategory(category);
         }
     }
 }

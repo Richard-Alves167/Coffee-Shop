@@ -6,6 +6,8 @@ namespace CafeteriaKwai.Data {
         public Product GetById(int id);
         public List<Product> GetAll();
         public List<Product> GetAllOneCategory(string category);
+        public List<Product> GetAllOneCategoryLimitSelected(string category, int limit);
+        public Product GetLastOneCategory(string category);
         public List<Product> GetAllFilter();
         public List<Product> GetAllDeleted();
         public void Update(Product product);
