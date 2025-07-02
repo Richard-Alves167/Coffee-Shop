@@ -107,13 +107,13 @@
 					break;
 				}
 		}
-		<img class="imageProduct" src="~/images/menu/strawberries.png" alt="Alternate Text" />
+		<img class="imageProduct" src="~/images/menu/@Model.lastProduct.ImageFileName" alt="Alternate Text" />
 		<div class="newProductInfo">
-			<h4 class="nameProduct">Morangos Canadenses</h4>
-			<p class="subtitle">Das fazendas de Vancouver</p>
+			<h4 class="nameProduct">@Model.lastProduct.Name</h4>
+			<p class="subtitle">@Model.lastProduct.ShortDescription</p>
 			<div class="priceArea">
-				<span class="subPrice">R$ 19,99</span>
-				<span class="price">R$ 9,99</span>
+				<span class="subPrice">R$ @Model.lastProduct.Price</span>
+				<span class="price">R$ @Model.priceDiscounted</span>
 			</div>
 		</div>
 	</div>
@@ -150,10 +150,9 @@
 			}
 	}
 	<div class="products">
-		<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-		<div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-		<div class="product-card"><img src="~/images/menu/granola.png"><p>Bolo de Nozes</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-		<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+		@foreach (var product in Model.listaCategoriaProdutos) {
+			<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card"><img src="~/images/menu/@product.ImageFileName"><p>@product.Name</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ @product.Price</span><span class="cardVerMais">VER MAIS</span></div></a>
+		}
 	</div>
 </section>
 
