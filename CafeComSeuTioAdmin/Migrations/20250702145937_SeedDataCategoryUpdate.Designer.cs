@@ -12,17 +12,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CafeteriaKwai.Migrations
 {
     [DbContext(typeof(CafeContext))]
-    [Migration("20250528112922_seeddata")]
-    partial class seeddata
+    [Migration("20250702145937_SeedDataCategoryUpdate")]
+    partial class SeedDataCategoryUpdate
     {
+        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.4")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("CafeComSeuTioAdmin.Data.Product", b =>
                 {
@@ -30,7 +31,7 @@ namespace CafeteriaKwai.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Category")
                         .IsRequired()
@@ -38,6 +39,9 @@ namespace CafeteriaKwai.Migrations
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -67,9 +71,10 @@ namespace CafeteriaKwai.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 33,
-                            Category = "Food",
+                            Id = 1,
+                            Category = "Savory",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "charcuterie.png",
                             Name = "Charcuterie",
@@ -78,9 +83,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 12,
-                            Category = "Food",
+                            Id = 2,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "waffles.png",
                             Name = "Waffles",
@@ -89,9 +95,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 13,
-                            Category = "Food",
+                            Id = 3,
+                            Category = "Savory",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "salad-special.png",
                             Name = "Santa Fe Salad",
@@ -100,9 +107,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 14,
-                            Category = "Food",
+                            Id = 4,
+                            Category = "Savory",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "salad-house.png",
                             Name = "Caesar Salad",
@@ -111,9 +119,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 15,
-                            Category = "Food",
+                            Id = 5,
+                            Category = "Savory",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "noodles.png",
                             Name = "Noodles",
@@ -122,9 +131,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 16,
-                            Category = "Food",
+                            Id = 6,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "cake.png",
                             Name = "Red Velvet Cake",
@@ -133,9 +143,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 17,
-                            Category = "Food",
+                            Id = 7,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "cupcake.png",
                             Name = "Cupcake",
@@ -144,9 +155,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 18,
-                            Category = "Food",
+                            Id = 8,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "muffin.png",
                             Name = "Muffin",
@@ -155,9 +167,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 19,
-                            Category = "Food",
+                            Id = 9,
+                            Category = "Kit",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "chocolate.png",
                             Name = "Chocolate Bites",
@@ -166,9 +179,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 20,
-                            Category = "Food",
+                            Id = 10,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "pumpkinbread.png",
                             Name = "Frosted Pumpkin Bread",
@@ -177,9 +191,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 21,
-                            Category = "Food",
+                            Id = 11,
+                            Category = "Kit",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "granola.png",
                             Name = "Granola with Nuts",
@@ -188,9 +203,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 22,
-                            Category = "Food",
+                            Id = 12,
+                            Category = "Kit",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "cookies.png",
                             Name = "Chocolate Chip Cookies",
@@ -199,9 +215,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 23,
-                            Category = "Food",
+                            Id = 13,
+                            Category = "Dessert",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "bagel.png",
                             Name = "Fresh Bagels",
@@ -210,9 +227,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 24,
-                            Category = "Coffee",
+                            Id = 14,
+                            Category = "Drink",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "ground.png",
                             Name = "Dark Brewed Coffee",
@@ -221,9 +239,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 25,
-                            Category = "Coffee",
+                            Id = 15,
+                            Category = "Drink",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "cappucino.png",
                             Name = "Latte",
@@ -232,9 +251,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 26,
-                            Category = "Coffee",
+                            Id = 16,
+                            Category = "Drink",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "beans.png",
                             Name = "Americano",
@@ -243,9 +263,10 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 27,
-                            Category = "Coffee",
+                            Id = 17,
+                            Category = "Drink",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "design.png",
                             Name = "Designer Espresso",
@@ -254,15 +275,209 @@ namespace CafeteriaKwai.Migrations
                         },
                         new
                         {
-                            Id = 28,
-                            Category = "Coffee",
+                            Id = 18,
+                            Category = "Drink",
                             Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
                             ImageFileName = "cup.png",
                             Name = "Cappucino",
                             Price = 4.5m,
                             ShortDescription = "Rich and foamy comfort coffee."
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Category = "Drink",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Uma deliciosa combinação de café gelado com calda de chocolate e leite cremoso. Perfeita para os dias quentes.",
+                            ImageFileName = "icedmocha.png",
+                            Name = "Iced Mocha",
+                            Price = 5.5m,
+                            ShortDescription = "Cold, creamy, and rich with chocolate."
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Category = "Drink",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Smoothie de morango natural com iogurte grego, sem adição de açúcares artificiais. Ideal para qualquer hora do dia.",
+                            ImageFileName = "smoothie.png",
+                            Name = "Strawberry Smoothie",
+                            Price = 6m,
+                            ShortDescription = "Fresh strawberries blended to perfection."
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Category = "Drink",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Chá verde gelado com infusão de manga e leve toque cítrico. Refrescante e saudável.",
+                            ImageFileName = "mango-tea.png",
+                            Name = "Mango Green Tea",
+                            Price = 4m,
+                            ShortDescription = "A tropical twist to classic green tea."
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Category = "Dessert",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Camadas de biscoito champagne embebidas em café, com creme de mascarpone e cacau. Um clássico irresistível.",
+                            ImageFileName = "tiramisu.png",
+                            Name = "Tiramisu Cup",
+                            Price = 6.5m,
+                            ShortDescription = "A mini Italian classic."
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Category = "Dessert",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Tartelete com base crocante, creme de baunilha e frutas frescas da estação.",
+                            ImageFileName = "fruit-tart.png",
+                            Name = "Fruit Tart",
+                            Price = 5.5m,
+                            ShortDescription = "Colorful, fresh and creamy."
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Category = "Dessert",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Caixa com 6 macarons artesanais, nos sabores: pistache, chocolate, framboesa, limão, café e baunilha.",
+                            ImageFileName = "macarons.png",
+                            Name = "Macarons Box",
+                            Price = 7m,
+                            ShortDescription = "Assorted flavors, always elegant."
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Category = "Savory",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Mini quiches de alho-poró, queijo e espinafre. Crocantes por fora, cremosas por dentro.",
+                            ImageFileName = "quiche.png",
+                            Name = "Mini Quiche",
+                            Price = 3.5m,
+                            ShortDescription = "Savory bites filled with love."
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Category = "Savory",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Empanadas artesanais recheadas com espinafre refogado e queijo cremoso.",
+                            ImageFileName = "empanada.png",
+                            Name = "Spinach & Cheese Empanadas",
+                            Price = 4m,
+                            ShortDescription = "Golden crust and savory filling."
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Category = "Savory",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Sanduíche com frango grelhado, molho pesto e tomate seco no pão rústico.",
+                            ImageFileName = "pesto-sandwich.png",
+                            Name = "Chicken Pesto Sandwich",
+                            Price = 6m,
+                            ShortDescription = "Grilled chicken with fresh pesto."
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Category = "Kit",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Kit com pacote de café moído premium, xícara personalizada e biscoitos amanteigados.",
+                            ImageFileName = "coffee-kit.png",
+                            Name = "Café Lovers Kit",
+                            Price = 25m,
+                            ShortDescription = "Everything a coffee lover needs."
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Category = "Kit",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Inclui mini quiche, suco natural, fatia de bolo caseiro e uma fruta fresca. Ideal para levar.",
+                            ImageFileName = "brunch-pack.png",
+                            Name = "Brunch Pack",
+                            Price = 18m,
+                            ShortDescription = "Perfect combo for late mornings."
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Category = "Kit",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Uma caixa com mini versões de nossos principais doces: cupcake, brownie, cookie e fatia de bolo.",
+                            ImageFileName = "dessert-kit.png",
+                            Name = "Dessert Sampler Box-Egg",
+                            Price = 20m,
+                            ShortDescription = "A taste of our sweetest selections."
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Category = "Savory",
+                            Created = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deleted = false,
+                            Description = "Sanduíche artesanal com tomate fresco, mussarela de búfala e folhas de manjericão, regado com azeite extra virgem e servido em pão ciabatta.",
+                            ImageFileName = "sandwich.png",
+                            Name = "X-Sandwich",
+                            Price = 5.5m,
+                            ShortDescription = "Fresh, cheesy, and packed with flavor."
                         });
+                });
+
+            modelBuilder.Entity("CafeteriaKwai.Data.Models.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CityId"));
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CityId");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("CafeteriaKwai.Data.Models.Country", b =>
+                {
+                    b.Property<int>("CountryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CountryId"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CountryId");
+
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("CafeteriaKwai.Data.Models.ProductDetail", b =>
@@ -284,6 +499,17 @@ namespace CafeteriaKwai.Migrations
                     b.ToTable("ProductDetails");
                 });
 
+            modelBuilder.Entity("CafeteriaKwai.Data.Models.City", b =>
+                {
+                    b.HasOne("CafeteriaKwai.Data.Models.Country", "Country")
+                        .WithMany("Cities")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("CafeteriaKwai.Data.Models.ProductDetail", b =>
                 {
                     b.HasOne("CafeComSeuTioAdmin.Data.Product", "Product")
@@ -293,6 +519,11 @@ namespace CafeteriaKwai.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("CafeteriaKwai.Data.Models.Country", b =>
+                {
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }
