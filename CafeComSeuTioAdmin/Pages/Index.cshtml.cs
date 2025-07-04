@@ -23,7 +23,7 @@ namespace CafeComSeuTioAdmin.Pages
         public IProductRepository ProductRepository { get; set; }
 
         [BindProperty]
-        public List<Product> listaProdutos { get; set; }
+        public List<Product> listaProdutosUltimosLancamentos { get; set; } = new List<Product>();
         public Product ProdutoNovidade1 { get; set; }
         public Product ProdutoNovidade2 { get; set; }
         public Product ProdutoNovidade3 { get; set; }
@@ -39,10 +39,7 @@ namespace CafeComSeuTioAdmin.Pages
         {
             var json = System.IO.File.ReadAllText(Path.Combine("wwwroot/SampleData/survey.json"));
             listSurvey = JsonSerializer.Deserialize<List<SurveyItem>>(json);
-            listaProdutos = ProductRepository.GetAll().ToList();
-            ProdutoNovidade1 = listaProdutos[listaProdutos.Count - 1];
-            ProdutoNovidade2 = listaProdutos[listaProdutos.Count - 2];
-            ProdutoNovidade3 = listaProdutos[listaProdutos.Count - 3];
+            listaProdutosUltimosLancamentos = ProductRepository.GetAllLastLimitSelected(3);
         }
     }
 }

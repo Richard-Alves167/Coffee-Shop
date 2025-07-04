@@ -123,48 +123,22 @@
 <section id="novidades">
 	<h2>Novidades</h2>
 	<div id="sectionCards">
-		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade1.Id" class="card">
-			<div class="card-inner">
-				<div class="card-front">
-					<img src="./images/menu/sobresema1.jpg" alt="Café Bom D+" />
-					<h3 class="cardName">@Model.ProdutoNovidade1.Name</h3>
+		@foreach (var product in Model.listaProdutosUltimosLancamentos) {
+			<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="card">
+				<div class="card-inner">
+					<div class="card-front">
+						<img src="./images/menu/@product.ImageFileName" alt="Café Bom D+" />
+						<h3 class="cardName">@product.Name</h3>
+					</div>
+					<div class="card-back">
+						<h3 class="cardName">@product.Name</h3>
+						<p class="cardPrice">Price: R$@product.Price</p>
+						<p class="cardShortDescription">@product.ShortDescription</p>
+						<p class="cardDescription">@product.Description</p>
+					</div>
 				</div>
-				<div class="card-back">
-					<h3 class="cardName">@Model.ProdutoNovidade1.Name</h3>
-					<p class="cardPrice">Price: R$@Model.ProdutoNovidade1.Price</p>
-					<p class="cardShortDescription">@Model.ProdutoNovidade1.ShortDescription</p>
-					<p class="cardDescription">@Model.ProdutoNovidade1.Description</p>
-				</div>
-			</div>
-		</a>
-		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade2.Id" class="card">
-			<div class="card-inner">
-				<div class="card-front">
-					<img src="./images/menu/sobremesa2.webp" alt="Café Bom D+" />
-					<h3 class="cardName">@Model.ProdutoNovidade2.Name</h3>
-				</div>
-				<div class="card-back">
-					<h3 class="cardName">@Model.ProdutoNovidade2.Name</h3>
-					<p class="cardPrice">Price: R$@Model.ProdutoNovidade2.Price</p>
-					<p class="cardShortDescription">@Model.ProdutoNovidade2.ShortDescription</p>
-					<p class="cardDescription">@Model.ProdutoNovidade2.Description</p>
-				</div>
-			</div>
-		</a>
-		<a asp-page="ProductDetailsClient" asp-route-id="@Model.ProdutoNovidade3.Id" class="card">
-			<div class="card-inner">
-				<div class="card-front">
-					<img src="./images/menu/sobremesa3.jpg" alt="Café Bom D+" />
-					<h3 class="cardName">@Model.ProdutoNovidade3.Name</h3>
-				</div>
-				<div class="card-back">
-					<h3 class="cardName">@Model.ProdutoNovidade3.Name</h3>
-					<p class="cardPrice">Price: R$@Model.ProdutoNovidade3.Price</p>
-					<p class="cardShortDescription">@Model.ProdutoNovidade3.ShortDescription</p>
-					<p class="cardDescription">@Model.ProdutoNovidade3.Description</p>
-				</div>
-			</div>
-		</a>
+			</a>
+		}
 	</div>
 </section>
 <section id="contato">

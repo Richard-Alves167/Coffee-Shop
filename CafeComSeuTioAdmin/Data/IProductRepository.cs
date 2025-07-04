@@ -5,6 +5,7 @@ namespace CafeteriaKwai.Data {
         public void Add(Product produto);
         public Product GetById(int id);
         public List<Product> GetAll();
+        public List<Product> GetAllLastLimitSelected(int limit);
         public List<Product> GetAllOneCategory(string category);
         public List<Product> GetAllOneCategoryLimitSelected(string category, int limit);
         public Product GetLastOneCategory(string category);

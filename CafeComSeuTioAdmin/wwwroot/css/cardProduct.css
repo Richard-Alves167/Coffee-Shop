@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-decoration: none;
 }
 
     .product-card img {
