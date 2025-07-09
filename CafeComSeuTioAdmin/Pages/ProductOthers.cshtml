@@ -2,3 +2,165 @@
 @model CafeteriaKwai.Pages.ProductOthersModel
 @{
 }
+<link rel="stylesheet" href="~/css/productOthers.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/cardProduct.css" asp-append-version="true" />
+
+<section class="slider">
+	<div class="slider-content">
+		<input type="radio" name="btn-radio" id="radio1" />
+		<input type="radio" name="btn-radio" id="radio2" />
+		<input type="radio" name="btn-radio" id="radio3" />
+
+		<div class="slide-box primeiro">
+			<img class="img-desktop" src="~/images/bannerCarrossel1.jpg" alt="slide 1" />
+			<img class="img-mobile" src="~/images/bannerCarrossel1.jpg" alt="slide 1" />
+		</div>
+		<div class="slide-box segundo">
+			<img class="img-desktop" src="~/images/bannerCarrossel2.webp" alt="slide 2" />
+			<img class="img-mobile" src="~/images/bannerCarrossel2.webp" alt="slide 2" />
+		</div>
+		<div class="slide-box terceiro">
+			<img class="img-desktop" src="~/images/bannerCarrossel3.jpg" alt="slide 3" />
+			<img class="img-mobile" src="~/images/bannerCarrossel3.jpg" alt="slide 3" />
+		</div>
+
+		<div class="nav-auto">
+			<div class="auto-btn1"></div>
+			<div class="auto-btn2"></div>
+			<div class="auto-btn3"></div>
+		</div>
+
+		<div class="nav-manual">
+			<label for="radio1" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio1" /></label>
+			<label for="radio2" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio2" /></label>
+			<label for="radio3" class="manual-btn"><img src="~/images/cats/xicaraVazia.png" alt="radio3" /></label>
+		</div>
+	</div>
+</section>
+<div class="catGifs">
+	<img src="~/images/cats/gatoDeitadoAmarelo.gif" />
+	<img src="~/images/cats/gatoDeitadoBranco.gif" />
+	<img src="~/images/cats/gatoDeitadoCinza.gif" />
+</div>
+<div class="container">
+	<div class="sidebar">
+		<h2>FILTROS</h2>
+
+		<section class="sectionCategory">
+			<h5>Categorias</h5>
+			<div class="displayFlexColunm">
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="categoryChoice1" name="category" value="Drink" />
+					<label for="categoryChoice1">Bebidas</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="categoryChoice2" name="category" value="Dessert" />
+					<label for="categoryChoice2">Sobremesas</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="category" value="Savory" />
+					<label for="categoryChoice3">Salgados</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="category" value="Kit" />
+					<label for="categoryChoice4">Kits</label>
+				</div>
+			</div>
+		</section>
+		<hr />
+		<section class="sectionSubCategory">
+			<h5>Sub-Categorias</h5>
+			<div class="displayFlexColunm">
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice1" name="subCategory" value="Cupcake" />
+					<label for="subCategoryChoice1">Cupcakes</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice2" name="subCategory" value="Forno" />
+					<label for="subCategoryChoice2">De Forno</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice3" name="subCategory" value="Fritura" />
+					<label for="subCategoryChoice3">Frituras</label>
+				</div>
+				<div class="displayFlexRow">
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice4" name="subCategory" value="Massa" />
+					<label for="subCategoryChoice4">Massas</label>
+				</div>
+			</div>
+			<span class="verMais">VER MAIS <span class="setaVerMais">V</span></span>
+		</section>
+		<hr />
+		<section class="preco">
+			<h5>Faixa de Preço</h5>
+			<div class="displayFlexRow">
+				<input class="inputPrice" type="number" placeholder="R$ min." />
+				<hr />
+				<input class="inputPrice" type="number" placeholder="R$ máx." />
+			</div>
+		</section>
+		<hr />
+		<section class="sectionAvaliation">
+			<h5>Avaliação</h5>
+			<div class="displayFlexColunm">
+				<div class="displayFlexRow">
+					<label>★★★★★</label><span>(0)</span>
+				</div>
+				<div class="displayFlexRow">
+					<label>★★★★☆</label><span>(8)</span>
+				</div>
+				<div class="displayFlexRow">
+					<label>★★★☆☆</label><span>(15)</span>
+				</div>
+				<div class="displayFlexRow">
+					<label>★★☆☆☆</label><span>(21)</span>
+				</div>
+				<div class="displayFlexRow">
+					<label>★☆☆☆☆</label><span>(34)</span>
+				</div>
+			</div>
+		</section>
+		<section>
+			<button>Buscar</button>
+			<button class="limpar">LIMPAR SELEÇÃO</button>
+		</section>
+	</div>
+
+	<div class="content">
+		<div class="top-bar">
+			<div class="subtop-bar">
+				<span>CLASSIFICAR POR</span>
+				<button class="selectedButton">Mais Relevante</button>
+				<button class="defaultButton">Mais Recente</button>
+				<button class="defaultButton">Mais Barato</button>
+				<select>
+					<option>Crescente</option>
+					<option>Decrescente</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="products">
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+		</div>
+
+		<div class="pagination">
+			<button class="paginationButton">&lt;</button>
+			<span class="dot active"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<button class="paginationButton">&gt;</button>
+		</div>
+	</div>
+</div>

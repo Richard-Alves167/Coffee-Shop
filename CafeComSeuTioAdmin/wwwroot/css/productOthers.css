@@ -1,0 +1,330 @@
+﻿.slider {
+    margin: 0;
+    width: 100%;
+    height: 75vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+    .slider-content input, .img-mobile {
+        display: none;
+    }
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+    .slide-box img {
+        width: 100%;
+    }
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+    .nav-manual .manual-btn, .nav-auto div {
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+        .nav-manual .manual-btn::after hover {
+            background-color: #805734;
+        }
+
+/*input[type="radio"]:not(:checked) + .manual-btn img {
+        content: url("../images/download.gif");*/
+/*content: url(../images/cats/xicaraVazia.png);*/
+/*}
+
+    input[type="radio"]:checked + .manual-btn img {
+        content: url("../images/download.gif");
+        border-color: #007bff;
+    }*/
+
+.manual-btn img {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 3px solid transparent;
+}
+
+/*#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: #805734;
+}*/
+
+#radio1:checked ~ .primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .segundo {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .terceiro {
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .nav-auto, .nav-manual {
+        margin-top: 60%;
+    }
+}
+
+.catGifs {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+    .catGifs img {
+        height: 90px;
+        margin-top: 15px;
+        position: relative;
+    }
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    padding-bottom: 10vw;
+}
+
+.sidebar {
+    width: 50vh;
+    height: fit-content;
+    background-color: #7D3000;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+.sideBarRadio {
+    all: unset;
+    width: 12px;
+    height: 12px;
+    background-color: #72340E;
+    border-radius: 20%;
+    border: 2px solid #471B00;
+}
+
+    .sideBarRadio:checked {
+        background-color: #471B00;
+        border-radius: 20%;
+        border: 2px solid #FFB568;
+    }
+
+.displayFlexRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar hr {
+    width: 100%;
+    color: #471B00;
+    opacity: 60%;
+    height: 2px;
+}
+
+    .sidebar h2 {
+        text-align-last: center;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .sidebar button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #f4a460;
+        border: none;
+        border-radius: 5px;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+.displayFlexColunm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sectionCategory {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.verMais {
+    width: 100%;
+    text-align-last: center;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #72340E;
+    border-radius: 6px;
+    border: solid 1px #471B00;
+    color: #C58C51;
+    cursor: pointer;
+}
+
+.setaVerMais {
+    font-size: 14px;
+    color: #FFB568;
+}
+
+.sectionSubCategory {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputPrice {
+    border-radius: 6px;
+    width: 6vw;
+    height: 36px;
+}
+
+.sectionAvaliation {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.limpar {
+    background-color: #c94c4c;
+    color: white;
+}
+
+.content {
+    width: -webkit-fill-available;
+}
+
+.top-bar {
+    margin-bottom: 20px;
+    background-color: #7D3000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.subtop-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #854136;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 80%;
+    gap: 15px;
+    padding: 10px;
+    align-items: anchor-center;
+}
+
+    .subtop-bar span {
+        font-size: 12px;
+        font-weight: bolder;
+        color: white;
+    }
+
+.defaultButton {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #52280E;
+    color: #FFB568;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selectedButton {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #C58C51;
+    color: #471B00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subtop-bar select {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #FFB568;
+    color: #371805;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: anchor-center;
+    gap: 10px;
+}
+
+.pagination {
+    margin: 20px 0;
+    margin: 20px 0;
+    align-items: anchor-center;
+    justify-content: center;
+}
+
+.paginationButton {
+    background: none;
+    border: none;
+    height: 70px;
+    color: #FFB568;
+    font-size: 30px;
+    font-weight: bold;
+}
+.dot {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #72340E;
+    border: 2px solid #471B00;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+    .dot.active {
+        background: #471B00;
+        border: 2px solid #FFB568;
+    }
