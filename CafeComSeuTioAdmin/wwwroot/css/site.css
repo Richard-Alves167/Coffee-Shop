@@ -19,6 +19,95 @@ nav {
     background-color: #471B00;
 }
 
+footer {
+    padding: 25px;
+    background-color: #471B00;
+    color: white;
+}
+
+main {
+    background-color: #805734;
+}
+
+.navBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logoTop {
+    max-width: 100px;
+}
+
+.searchDiv {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+    .searchDiv input {
+        width: 100%;
+        height: 40px;
+        border: solid 4px #C08C55;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .searchDiv button {
+        height: 40px;
+        width: 55px;
+        background-color: #C08C55;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .searchDiv button img {
+        height: 30px;
+    }
+
+.functionsNav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.accountLogin {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.accountLogin span{
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+}
+
+    .accountLogin a {
+        text-decoration: none;
+    }
+
+.accountLogin img {
+    height: 50px;
+}
+
+.subNavBar {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #471B00;
+}
+
 .navCategory {
     display: flex;
     flex-direction: row;
@@ -64,7 +153,7 @@ nav {
     background-color: #D2B482;
     border-radius: 8px;
     position: absolute;
-    margin-bottom: -8vw;
+    margin-bottom: -14vh;
     margin-left: -1vh;
     z-index: 1;
     transform: scaleY(0);
@@ -78,36 +167,21 @@ nav {
     font-weight: bold;
 }
 
-.navSubCategoryLink:hover {
-    background: none;
-}
-
-    .navSubCategoryBox hr {
-        width: 100%;
-        height: 1px;
-        background-color: #471B00;
-        opacity: 0.5;
-        margin: 0;
+    .navSubCategoryLink:hover {
+        background: none;
     }
+
+.navSubCategoryBox hr {
+    width: 100%;
+    height: 1px;
+    background-color: #471B00;
+    opacity: 0.5;
+    margin: 0;
+}
 
 .navSubCategoryHover:hover .navSubCategoryBox {
     display: block;
     transform: scaleX(1);
-}
-
-
-footer {
-    padding: 25px;
-    background-color: #471B00;
-    color: white;
-}
-
-main {
-    background-color: #805734;
-}
-
-#logoTop {
-    max-width: 80px;
 }
 
 #logo {

@@ -4,176 +4,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Cafeteria Kwai</title>
-    <link rel="shortcut icon" href="~/images/iconeCafeKwaiComFundo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Cafeteria Kwai</title>
+	<link rel="shortcut icon" href="~/images/iconeCafeKwaiComFundo.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/CafeComSeuTioAdmin.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/CafeComSeuTioAdmin.styles.css" asp-append-version="true" />
 
-    <environment names="Development">
-        <link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.css"
-    </environment>
-    <environment names="Production">
-        <link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.min.css"
-    </environment>
+	<environment names="Development">
+		<link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.css"
+	</environment>
+	<environment names="Production">
+		<link ref="stylesheet" href="~\lib\bootstrap\dist\css\bootstrap.min.css"
+	</environment>
 </head>
 <body>
-    <div>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item centralizer">
-                                <a class="nav-link" aria-current="page" asp-page="/Index"><img src="~/images/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a>
-                            </li>
-                            <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Products
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" asp-page="/Products/ViewAllProducts">View All</a></li>
-                                    <li><a class="dropdown-item" asp-page="/Products/AddProduct">Add New</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Countries
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" asp-page="/Countries/Index">Countries</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cities
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" asp-page="/Cities/Index">Cities</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item centralizer">
-                                <a class="nav-link disabled">Orders (Coming soon)</a>
-                            </li>
-                            <li class="nav-item centralizer">
-                                <a class="nav-link">Help</a>
-                            </li>
-                        </ul>
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="d-inline">
-                                <button type="submit" class="btn btn-link">Logout</button>
-                            </form>
-                        }
-                        else
-                        {
-                            <a asp-page="/Identity/Pages/Account/Login">Login</a>
-                        }
-                    </div>
+	<div>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<div class="navBar">
+					<a aria-current="page" asp-page="/Index"><img src="~/images/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a>
+					<div class="searchDiv">
+						<input type="text" placeholder="" />
+						<button>
+							<img src="~/images/lupa.png" alt="lupa" />
+						</button>
+					</div>
+					<div class="functionsNav">
+						<div class="accountLogin">
+							@if (SignInManager.IsSignedIn(User))
+							{
+								<img src="~/images/profileAccountImage.png" alt="profile account" />
+								<form asp-area="Identity" asp-page="/Account/Logout" method="post" class="d-inline">
+									<button type="submit" class="btn btn-link">Olá, @SignInManager.Context.User.Identity.Name !</button>
+								</form>
+							}
+							else
+							{
+								<a asp-page="/Identity/Pages/Account/Login">
+									<img src="~/images/profileAccountImage.png" alt="profile account" />
+									<span>Login</span>
+								</a>
+							}
+						</div>
+						<a>
+							<img src="~/images/carrinhoDeCompras.png" alt="carrinho de compras" />
+							@if (SignInManager.IsSignedIn(User))
+							{
+								<span>(0)</span>
+							}
+						</a>
+					</div>
+					@* <div class="container-fluid"> *@
+					@* 	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> *@
+					@* 		<span class="navbar-toggler-icon"></span> *@
+					@* 	</button> *@
+					@* 	<div class="collapse navbar-collapse" id="navbarSupportedContent"> *@
+					@* <ul class="navbar-nav me-auto mb-2 mb-lg-0"> *@
+					@* <li class="nav-item centralizer"> *@
+					@* 	<a class="nav-link" aria-current="page" asp-page="/Index"><img src="~/images/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a> *@
+					@* </li> *@
+					@* <li class="nav-item dropdown centralizer"> *@
+					@*     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> *@
+					@*         Products *@
+					@*     </a> *@
+					@*     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink"> *@
+					@*         <li><a class="dropdown-item" asp-page="/Products/ViewAllProducts">View All</a></li> *@
+					@*         <li><a class="dropdown-item" asp-page="/Products/AddProduct">Add New</a></li> *@
+					@*     </ul> *@
+					@* </li> *@
+					@* <li class="nav-item dropdown centralizer"> *@
+					@*     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> *@
+					@*         Countries *@
+					@*     </a> *@
+					@*     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink"> *@
+					@*         <li><a class="dropdown-item" asp-page="/Countries/Index">Countries</a></li> *@
+					@*     </ul> *@
+					@* </li> *@
+					@* <li class="nav-item dropdown centralizer"> *@
+					@*     <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> *@
+					@*         Cities *@
+					@*     </a> *@
+					@*     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink"> *@
+					@*         <li><a class="dropdown-item" asp-page="/Cities/Index">Cities</a></li> *@
+					@*     </ul> *@
+					@* </li> *@
+					@* <li class="nav-item centralizer"> *@
+					@*     <a class="nav-link disabled">Orders (Coming soon)</a> *@
+					@* </li> *@
+					@* <li class="nav-item centralizer"> *@
+					@*     <a class="nav-link">Help</a> *@
+					@* </li> *@
+					@* </ul> *@
+					@* </div> *@
+					@* </div> *@
+					@* </div> *@
+			</nav>
+			<nav class="subNavBar">
+				<ul class="navbar-nav navCategory">
+					<li class="nav-item dropdown centralizer navSubCategoryHover">
+						<a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Drink">
+							BEBIDAS
+						</a>
+						<ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CAFÉS</a></li>
+							<hr />
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">CAPUCCINOS</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown centralizer navSubCategoryHover">
+						<a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Dessert">
+							SOBREMESAS
+						</a>
+						<ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CUPCAKES</a></li>
+							<hr />
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">TORTAS</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown centralizer navSubCategoryHover">
+						<a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Savory">
+							SALGADOS
+						</a>
+						<ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">FORNOS</a></li>
+							<hr />
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">FRITOS</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown centralizer navSubCategoryHover">
+						<a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Kit">
+							KITS
+						</a>
+						<ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">PACOTES</a></li>
+							<hr />
+							<li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">GRÃOS</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown centralizer">
+						<a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductOthers">
+							OUTROS
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			@RenderBody()
+		</main>
+		<footer>
+			<div class="row">
+				<div class="col-md-4">
+					<p>&copy; 2025 - Cafeteria Kwai</p>
+					<img id="logo" src="~/images/logoCafeKwaiBranco.png" />
+				</div>
+				<div class="col-md-4">
+					<p>2345678 Cafeteria Kwai</p>
+					<p>Rio de Janeiro - Centro</p>
+					<p>Phone: +55 (21)983290777</p>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-pic">
+						@{
+							var urlPath = Context.Request.Path;
+						}
+						@switch (urlPath)
+						{
+							case "/":
+								<img src="https://i.gifer.com/UEl2.gif" />
+								break;
+							case "/Products/AddProduct":
+								<img src="https://www.mexidodeideias.com.br/?attachment_id=29991" />
+								break;
+							case "/Products/ViewAllProducts":
+								<img src="https://i.pinimg.com/originals/be/e6/df/bee6dfb0b3cff75482d437fbcfcfc7c2.gif" />
+								break;
+						}
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<partial name="_ValidationScriptsPartial" />
 
-                    <a class="navbar-brand float-right">Cafeteria Kwai</a>
-                </div>
-            </nav>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav navCategory">
-                            <li class="nav-item dropdown centralizer navSubCategoryHover">
-                                <a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Drink">
-                                    BEBIDAS
-                                </a>
-                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CAFÉS</a></li>
-                                    <hr />
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">CAPUCCINOS</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer navSubCategoryHover">
-                                <a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Dessert">
-                                    SOBREMESAS
-                                </a>
-                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">CUPCAKES</a></li>
-                                    <hr />
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">TORTAS</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer navSubCategoryHover">
-                                <a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Savory">
-                                    SALGADOS
-                                </a>
-                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">FORNOS</a></li>
-                                    <hr />
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">FRITOS</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer navSubCategoryHover">
-                                <a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductCategory" asp-route-category="Kit">
-                                    KITS
-                                </a>
-                                <ul class="navSubCategoryBox" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/ViewAllProducts">PACOTES</a></li>
-                                    <hr />
-                                    <li><a class="dropdown-item navSubCategoryLink" aria-expanded="false" asp-page="/Products/AddProduct">GRÃOS</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown centralizer">
-                                <a class="navCategoryLink" role="button" aria-expanded="false" asp-page="ProductOthers">
-                                    OUTROS
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            @RenderBody()
-        </main>
-        <footer>
-            <div class="row">
-                <div class="col-md-4">
-                    <p>&copy; 2025 - Cafeteria Kwai</p>
-                    <img id="logo" src="~/images/logoCafeKwaiBranco.png" />
-                </div>
-                <div class="col-md-4">
-                    <p>2345678 Cafeteria Kwai</p>
-                    <p>Rio de Janeiro - Centro</p>
-                    <p>Phone: +55 (21)983290777</p>                    
-                </div>
-                <div class="col-md-4">
-                    <div class="footer-pic">
-                        @{
-                            var urlPath = Context.Request.Path;
-                        }
-                        @switch(urlPath) {
-                            case "/":
-                                <img src="https://i.gifer.com/UEl2.gif" />
-                                break;
-                            case "/Products/AddProduct":
-                                <img src="https://www.mexidodeideias.com.br/?attachment_id=29991" />
-                                break;
-                            case "/Products/ViewAllProducts":
-                                <img src="https://i.pinimg.com/originals/be/e6/df/bee6dfb0b3cff75482d437fbcfcfc7c2.gif" />
-                                break;
-                        }
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <partial name="_ValidationScriptsPartial" />
-
-    @await RenderSectionAsync("Scripts", required: false)
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
