@@ -122,6 +122,9 @@
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 50vh;
     height: fit-content;
     background-color: #7D3000;
@@ -167,16 +170,29 @@
         margin-bottom: 10px;
     }
 
-    .sidebar button {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: #f4a460;
-        border: none;
-        border-radius: 5px;
-        color: #000;
-        font-weight: bold;
-        cursor: pointer;
+.sectionButtons {
+    margin-top: 20px;
+}
+
+.sectionButtons button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471B00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+
+    .sectionButtons button:hover {
+        background-color: #72340E;
+        border: solid 3px #471B00;
+        color: #f4a460;
     }
 
 .displayFlexColunm {
@@ -218,6 +234,10 @@
     border-radius: 6px;
     width: 6vw;
     height: 36px;
+    padding-left: 8px;
+    color: #f4a460;
+    background-color: #72340E;
+    border: solid 2px #471B00;
 }
 
 .sectionAvaliation {
@@ -297,6 +317,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     place-items: anchor-center;
     gap: 10px;
+    min-height: 60vh;
+}
+
+.searchNotFound {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFB568;
+    text-align: center;
 }
 
 .pagination {

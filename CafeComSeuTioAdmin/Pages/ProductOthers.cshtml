@@ -62,7 +62,7 @@
 					<label for="categoryChoice3">Salgados</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="category" value="Kit" />
+					<input class="sideBarRadio" type="radio" id="categoryChoice4" name="category" value="Kit" />
 					<label for="categoryChoice4">Kits</label>
 				</div>
 			</div>
@@ -104,24 +104,29 @@
 			<h5>Avaliação</h5>
 			<div class="displayFlexColunm">
 				<div class="displayFlexRow">
-					<label>★★★★★</label><span>(0)</span>
+					<input class="sideBarRadio" type="radio" id="avaliationChoice1" name="avaliation" value="5" />
+					<label for="avaliationChoice1">★★★★★<span> (0)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<label>★★★★☆</label><span>(8)</span>
+					<input class="sideBarRadio" type="radio" id="avaliationChoice2" name="avaliation" value="4" />
+					<label for="avaliationChoice2">★★★★☆<span> (8)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<label>★★★☆☆</label><span>(15)</span>
+					<input class="sideBarRadio" type="radio" id="avaliationChoice3" name="avaliation" value="3" />
+					<label for="avaliationChoice3">★★★☆☆<span> (15)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<label>★★☆☆☆</label><span>(21)</span>
+					<input class="sideBarRadio" type="radio" id="avaliationChoice4" name="avaliation" value="2" />
+					<label for="avaliationChoice4">★★☆☆☆<span> (21)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<label>★☆☆☆☆</label><span>(34)</span>
+					<input class="sideBarRadio" type="radio" id="avaliationChoice5" name="avaliation" value="1" />
+					<label for="avaliationChoice5">★☆☆☆☆<span> (34)</span></label>
 				</div>
 			</div>
 		</section>
-		<section>
-			<button>Buscar</button>
+		<section class="sectionButtons">
+			<button>BUSCAR</button>
 			<button class="limpar">LIMPAR SELEÇÃO</button>
 		</section>
 	</div>
@@ -141,17 +146,26 @@
 		</div>
 
 		<div class="products">
-			@foreach (var product in Model.ListaProdutosPesquisados) {
-				<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card"><img src="~/images/menu/@product.ImageFileName"><p>@product.Name</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ @product.Price</span><span class="cardVerMais">VER MAIS</span></div></a>
+			@if (Model.ListaProdutosPesquisados.Count == 0) {
+				<span></span>
+				<span class="searchNotFound">"@Model.StringSearch" <br />Nenhum produto encontrado.</span>
+			} else {
+				@foreach (var product in Model.ListaProdutosPesquisados)
+				{
+					<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card"><img src="~/images/menu/@product.ImageFileName"><p>@product.Name</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ @product.Price</span><span class="cardVerMais">VER MAIS</span></div></a>
+				}
 			}
 		</div>
 
-		<div class="pagination">
-			<button class="paginationButton">&lt;</button>
-			<span class="dot active"></span>
-			<span class="dot"></span>
-			<span class="dot"></span>
-			<button class="paginationButton">&gt;</button>
-		</div>
+		@if (Model.ListaProdutosPesquisados.Count != 0)
+		{
+			<div class="pagination">
+				<button class="paginationButton">&lt;</button>
+				<span class="dot active"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<button class="paginationButton">&gt;</button>
+			</div>
+		}
 	</div>
 </div>
