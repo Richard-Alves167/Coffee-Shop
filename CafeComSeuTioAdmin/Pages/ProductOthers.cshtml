@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/ProductOthers/{StringSearch?}"
 @model CafeteriaKwai.Pages.ProductOthersModel
 @{
 }
@@ -141,18 +141,9 @@
 		</div>
 
 		<div class="products">
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-			<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			@foreach (var product in Model.ListaProdutosPesquisados) {
+				<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card"><img src="~/images/menu/@product.ImageFileName"><p>@product.Name</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ @product.Price</span><span class="cardVerMais">VER MAIS</span></div></a>
+			}
 		</div>
 
 		<div class="pagination">

@@ -30,6 +30,9 @@ namespace CafeteriaKwai.Data {
         List<Product> IProductRepository.GetAllLastLimitSelected(int limit) {
             return _context.Products.Where(p => p.Deleted == false).OrderByDescending(p => p.Id).Take(limit).ToList();
         }
+        List<Product> IProductRepository.GetSearchLimitSelected(string search, int limit) {
+            return _context.Products.Where(p => p.Deleted == false && (p.Name.Contains(search))).OrderByDescending(p => p.Id).Take(limit).ToList();
+        }
         List<Product> IProductRepository.GetAllOneCategory(string category) {
             return _context.Products.Where(p => p.Category == category && p.Deleted == false).ToList();
         }

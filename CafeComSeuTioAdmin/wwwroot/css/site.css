@@ -42,7 +42,7 @@ main {
 }
 
 .searchDiv {
-    width: 50%;
+    width: 42%;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -54,12 +54,16 @@ main {
         border: solid 4px #C08C55;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        padding-left: 15px;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .searchDiv button {
         height: 40px;
         width: 55px;
         background-color: #C08C55;
+        border: none;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
@@ -79,7 +83,7 @@ main {
 .accountLogin {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -92,6 +96,11 @@ main {
 
     .accountLogin a {
         text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 
 .accountLogin img {
