@@ -1,0 +1,174 @@
+﻿.divPricipal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.divImageLogin {
+    height: 100%;
+    width: 60%;
+}
+
+.imageLogin {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.divImageLoginCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: -70vh;
+    margin-left: 12vw;
+    border-radius: 30px;
+}
+
+.divImageLoginCenter img {
+    width: 25vw;
+}
+
+    .divImageLoginCenter span {
+        color: #CC9A66;
+        font-weight: bold;
+        font-size: 28px;
+        text-align: center;
+        width: 60vh;
+    }
+
+.divPricipal section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 40%;
+}
+
+    .divPricipal section hr {
+        width: 75%;
+        height: 3px;
+        background-color: #471B00;
+        opacity: 1;
+        justify-self: center;
+    }
+
+    .divPricipal section form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+.spanLoginTop {
+    color: #CC9A66;
+    font-weight: bold;
+    font-size: 8vh;
+}
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.spanLogin {
+    font-size: 20px;
+    color: #CC9A66;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inputLogin {
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: #471B00;
+    border-radius: 10px;
+    border-bottom: 8px solid #CC9A66;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #CC9A66;
+    margin-bottom: 10px;
+}
+
+.forgotPasswordAlignRight {
+    text-align: right;
+    padding-right: 3vh;
+}
+
+.forgotPassword {
+    color: #D2B482;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rememberMe {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    color: #D2B482;
+}
+
+.rememberMe input {
+    all: unset;
+    width: 12px;
+    height: 12px;
+    background-color: #72340E;
+    border-radius: 20%;
+    border: 2px solid #471B00;
+}
+
+.rememberMe input:checked {
+    background-color: #471B00;
+    border-radius: 20%;
+    border: 2px solid #FFB568;
+}
+
+.botaoLogin {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471B00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+    .botaoLogin:hover {
+        background-color: #72340E;
+        border: solid 3px #471B00;
+        color: #f4a460;
+    }
+
+.divNewAccount {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.dontHaveAccount {
+    color: #D2B482;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.newAccount {
+    color: #471B00;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
