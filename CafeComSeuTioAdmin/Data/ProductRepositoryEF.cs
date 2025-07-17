@@ -33,6 +33,30 @@ namespace CafeteriaKwai.Data {
         List<Product> IProductRepository.GetSearchLimitSelected(string search, int limit) {
             return _context.Products.Where(p => p.Deleted == false && (p.Name.Contains(search))).OrderByDescending(p => p.Id).Take(limit).ToList();
         }
+        List<Product> IProductRepository.GetSearchFilteredLimitSelected(string search, int limit, string category, string subCategory, decimal minPrice, decimal maxPrice, int avaliation) {
+            var query = _context.Products.AsQueryable();
+            query = query.Where(p => !p.Deleted);
+
+            if (!string.IsNullOrWhiteSpace(search))
+                query = query.Where(p => p.Name.Contains(search));
+
+            if (!string.IsNullOrWhiteSpace(category))
+                query = query.Where(p => p.Category == category);
+
+            if (!string.IsNullOrWhiteSpace(subCategory))
+                query = query.Where(p => p.Name == subCategory);
+
+            if (minPrice > 0)
+                query = query.Where(p => p.Price >= minPrice);
+
+            if (maxPrice > 0)
+                query = query.Where(p => p.Price <= maxPrice);
+
+            //if (avaliation > 0)
+            //    query = query.Where(p => p.Avaliation >= avaliation);
+
+            return query.OrderByDescending(p => p.Id).Take(limit).ToList();
+        }
         List<Product> IProductRepository.GetAllOneCategory(string category) {
             return _context.Products.Where(p => p.Category == category && p.Deleted == false).ToList();
         }

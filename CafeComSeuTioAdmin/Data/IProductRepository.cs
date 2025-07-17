@@ -7,6 +7,7 @@ namespace CafeteriaKwai.Data {
         public List<Product> GetAll();
         public List<Product> GetAllLastLimitSelected(int limit);
         public List<Product> GetSearchLimitSelected(string search, int limit);
+        public List<Product> GetSearchFilteredLimitSelected(string search, int limit, string category, string subCategory, decimal minPrice, decimal maxPrice, int avaliation);
         public List<Product> GetAllOneCategory(string category);
         public List<Product> GetAllOneCategoryLimitSelected(string category, int limit);
         public Product GetLastOneCategory(string category);

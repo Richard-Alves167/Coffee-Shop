@@ -43,26 +43,26 @@
 	<img src="~/images/cats/gatoDeitadoCinza.gif" />
 </div>
 <div class="container">
-	<div class="sidebar">
+	<form method="post" class="sidebar">
 		<h2>FILTROS</h2>
 
 		<section class="sectionCategory">
 			<h5>Categorias</h5>
 			<div class="displayFlexColunm">
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="categoryChoice1" name="category" value="Drink" />
+					<input class="sideBarRadio" type="radio" id="categoryChoice1" name="ProductSearchCategory" value="Drink" @(Model.ProductSearchCategory.Equals("Drink") ? "checked" : "") />
 					<label for="categoryChoice1">Bebidas</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="categoryChoice2" name="category" value="Dessert" />
+					<input class="sideBarRadio" type="radio" id="categoryChoice2" name="ProductSearchCategory" value="Dessert" @(Model.ProductSearchCategory.Equals("Dessert") ? "checked" : "") />
 					<label for="categoryChoice2">Sobremesas</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="category" value="Savory" />
+					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="ProductSearchCategory" value="Savory" @(Model.ProductSearchCategory.Equals("Savory") ? "checked" : "") />
 					<label for="categoryChoice3">Salgados</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="categoryChoice4" name="category" value="Kit" />
+					<input class="sideBarRadio" type="radio" id="categoryChoice3" name="ProductSearchCategory" value="Kit" @(Model.ProductSearchCategory.Equals("Kit") ? "checked" : "") />
 					<label for="categoryChoice4">Kits</label>
 				</div>
 			</div>
@@ -72,19 +72,19 @@
 			<h5>Sub-Categorias</h5>
 			<div class="displayFlexColunm">
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="subCategoryChoice1" name="subCategory" value="Cupcake" />
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice1" name="ProductSearchSubCategory" value="Cupcake" @(Model.ProductSearchSubCategory.Equals("Cupcake") ? "checked" : "") />
 					<label for="subCategoryChoice1">Cupcakes</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="subCategoryChoice2" name="subCategory" value="Forno" />
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice2" name="ProductSearchSubCategory" value="Forno" @(Model.ProductSearchSubCategory.Equals("Forno") ? "checked" : "") />
 					<label for="subCategoryChoice2">De Forno</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="subCategoryChoice3" name="subCategory" value="Fritura" />
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice3" name="ProductSearchSubCategory" value="Fritura" @(Model.ProductSearchSubCategory.Equals("Fritura") ? "checked" : "") />
 					<label for="subCategoryChoice3">Frituras</label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="subCategoryChoice4" name="subCategory" value="Massa" />
+					<input class="sideBarRadio" type="radio" id="subCategoryChoice4" name="ProductSearchSubCategory" value="Massa" @(Model.ProductSearchSubCategory.Equals("Massa") ? "checked" : "") />
 					<label for="subCategoryChoice4">Massas</label>
 				</div>
 			</div>
@@ -94,9 +94,9 @@
 		<section class="preco">
 			<h5>Faixa de Preço</h5>
 			<div class="displayFlexRow">
-				<input class="inputPrice" type="number" placeholder="R$ min." />
+				<input class="inputPrice" type="number" placeholder="R$ min." name="ProductSearchMinPrice" value="@Model.ProductSearchMinPrice" @(Model.ProductSearchMinPrice.Equals("Forno") ? "checked" : "") />
 				<hr />
-				<input class="inputPrice" type="number" placeholder="R$ máx." />
+				<input class="inputPrice" type="number" placeholder="R$ máx." name="ProductSearchMaxPrice" value="@Model.ProductSearchMaxPrice" @(Model.ProductSearchMaxPrice.Equals("Forno") ? "checked" : "") />
 			</div>
 		</section>
 		<hr />
@@ -104,32 +104,32 @@
 			<h5>Avaliação</h5>
 			<div class="displayFlexColunm">
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="avaliationChoice1" name="avaliation" value="5" />
+					<input class="sideBarRadio" type="radio" id="avaliationChoice1" name="ProductSearchAvaliation" value="5" @(Model.ProductSearchAvaliation == 5 ? "checked" : "") />
 					<label for="avaliationChoice1">★★★★★<span> (0)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="avaliationChoice2" name="avaliation" value="4" />
+					<input class="sideBarRadio" type="radio" id="avaliationChoice2" name="ProductSearchAvaliation" value="4" @(Model.ProductSearchAvaliation == 4 ? "checked" : "")/>
 					<label for="avaliationChoice2">★★★★☆<span> (8)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="avaliationChoice3" name="avaliation" value="3" />
+					<input class="sideBarRadio" type="radio" id="avaliationChoice3" name="ProductSearchAvaliation" value="3" @(Model.ProductSearchAvaliation == 3 ? "checked" : "") />
 					<label for="avaliationChoice3">★★★☆☆<span> (15)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="avaliationChoice4" name="avaliation" value="2" />
+					<input class="sideBarRadio" type="radio" id="avaliationChoice4" name="ProductSearchAvaliation" value="2" @(Model.ProductSearchAvaliation == 2 ? "checked" : "") />
 					<label for="avaliationChoice4">★★☆☆☆<span> (21)</span></label>
 				</div>
 				<div class="displayFlexRow">
-					<input class="sideBarRadio" type="radio" id="avaliationChoice5" name="avaliation" value="1" />
+					<input class="sideBarRadio" type="radio" id="avaliationChoice5" name="ProductSearchAvaliation" value="1" @(Model.ProductSearchAvaliation == 1 ? "checked" : "") />
 					<label for="avaliationChoice5">★☆☆☆☆<span> (34)</span></label>
 				</div>
 			</div>
 		</section>
 		<section class="sectionButtons">
 			<button>BUSCAR</button>
-			<button class="limpar">LIMPAR SELEÇÃO</button>
+			<button asp-page-handler="Clean" class="limpar">LIMPAR SELEÇÃO</button>
 		</section>
-	</div>
+	</form>
 
 	<div class="content">
 		<div class="top-bar">
