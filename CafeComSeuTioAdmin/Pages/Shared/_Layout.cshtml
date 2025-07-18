@@ -7,7 +7,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>@ViewData["Title"] - Cafeteria Kwai</title>
-	<link rel="shortcut icon" href="~/images/iconeCafeKwaiComFundo.jpg" type="image/x-icon">
+	<link rel="shortcut icon" href="~/images/logo/iconeCafeKwaiComFundo.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -25,11 +25,11 @@
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark">
 				<div class="navBar">
-					<a aria-current="page" asp-page="/Index"><img src="~/images/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a>
+					<a aria-current="page" asp-page="/Index"><img src="~/images/logo/logoCafeKwaiBrancoReduzido.png" id="logoTop" /></a>
 					<div class="searchDiv">
 						<input id="inputSearch" type="text" placeholder="Pesquisar um produto" />
 						<button onclick="searchProduct()">
-							<img src="~/images/lupa.png" alt="lupa" />
+							<img src="~/images/iconsAction/lupa.png" alt="lupa" />
 						</button>
 					</div>
 					<div class="functionsNav">
@@ -41,20 +41,20 @@
 								@* 	<button type="submit" class="btn btn-link">Olá, @SignInManager.Context.User.Identity.Name !</button> *@
 								@* </form> *@
 								<a asp-page="/Identity/Pages/Account/AccountInfo">
-									<img src="~/images/profileAccountImage.png" alt="profile account" />
+									<img src="~/images/interface/profileAccountImage.png" alt="profile account" />
 									<span>Olá, @SignInManager.Context.User.Identity.Name !</span>
 								</a>
 							}
 							else
 							{
 								<a asp-page="/Identity/Pages/Account/Login">
-									<img src="~/images/profileAccountImage.png" alt="profile account" />
+									<img src="~/images/interface/profileAccountImage.png" alt="profile account" />
 									<span>Login</span>
 								</a>
 							}
 						</div>
 						<a>
-							<img src="~/images/carrinhoDeCompras.png" alt="carrinho de compras" />
+							<img src="~/images/iconsAction/carrinhoDeCompras.png" alt="carrinho de compras" />
 							@if (SignInManager.IsSignedIn(User))
 							{
 								<span>(0)</span>
@@ -119,7 +119,7 @@
 			<div class="row">
 				<div class="col-md-4">
 					<p>&copy; 2025 - Cafeteria Kwai</p>
-					<img id="logo" src="~/images/logoCafeKwaiBranco.png" />
+					<img id="logo" src="~/images/logo/logoCafeKwaiBranco.png" />
 				</div>
 				<div class="col-md-4">
 					<p>2345678 Cafeteria Kwai</p>
