@@ -32,9 +32,9 @@
     font-style: italic;
 }
 
-.divImageLoginCenter img {
-    width: 20vw;
-}
+    .divImageLoginCenter img {
+        width: 20vw;
+    }
 
     .divImageLoginCenter span {
         color: whitesmoke;
@@ -117,20 +117,20 @@
     color: #D2B482;
 }
 
-.rememberMe input {
-    all: unset;
-    width: 12px;
-    height: 12px;
-    background-color: #72340E;
-    border-radius: 20%;
-    border: 2px solid #471B00;
-}
+    .rememberMe input {
+        all: unset;
+        width: 12px;
+        height: 12px;
+        background-color: #72340E;
+        border-radius: 20%;
+        border: 2px solid #471B00;
+    }
 
-.rememberMe input:checked {
-    background-color: #471B00;
-    border-radius: 20%;
-    border: 2px solid #FFB568;
-}
+        .rememberMe input:checked {
+            background-color: #471B00;
+            border-radius: 20%;
+            border: 2px solid #FFB568;
+        }
 
 .botaoLogin {
     width: 70%;
@@ -147,6 +147,7 @@
     box-sizing: border-box;
     transform-box: content-box;
 }
+
     .botaoLogin:hover {
         background-color: #72340E;
         border: solid 3px #471B00;
