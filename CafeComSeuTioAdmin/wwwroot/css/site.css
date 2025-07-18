@@ -95,6 +95,9 @@ main {
 }
 
     .accountLogin a {
+        font-size: 16px;
+        font-weight: bolder;
+        color: white;
         text-decoration: none;
         display: flex;
         flex-direction: row;

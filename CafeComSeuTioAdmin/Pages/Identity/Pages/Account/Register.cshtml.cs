@@ -121,17 +121,17 @@ namespace CafeteriaKwai.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                var existingUser = await _userManager.FindByNameAsync(Input.Name);
+                if (existingUser != null) {
+                    ModelState.AddModelError("Input.Name", "Username already in use.");
+                    return Page();
+                }
+
                 var user = CreateUser();
 
                 await _userStore.SetUserNameAsync(user, Input.Name, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
-
-                var existingUser = await _userManager.FindByNameAsync(Input.Name);
-                //if (existingUser != null) {
-                //    ModelState.AddModelError("Input.Name", "Username already in use.");
-                //    return Page();
-                //}
 
                 if (result.Succeeded)
                 {

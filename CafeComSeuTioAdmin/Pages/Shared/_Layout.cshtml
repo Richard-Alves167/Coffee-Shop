@@ -36,10 +36,14 @@
 						<div class="accountLogin">
 							@if (SignInManager.IsSignedIn(User))
 							{
-								<img src="~/images/profileAccountImage.png" alt="profile account" />
-								<form asp-area="Identity" asp-page="/Account/Logout" method="post" class="d-inline">
-									<button type="submit" class="btn btn-link">Olá, @SignInManager.Context.User.Identity.Name !</button>
-								</form>
+								@* <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="d-inline"> *@
+								@* 	<img src="~/images/profileAccountImage.png" alt="profile account" /> *@
+								@* 	<button type="submit" class="btn btn-link">Olá, @SignInManager.Context.User.Identity.Name !</button> *@
+								@* </form> *@
+								<a asp-page="/Identity/Pages/Account/AccountInfo">
+									<img src="~/images/profileAccountImage.png" alt="profile account" />
+									<span>Olá, @SignInManager.Context.User.Identity.Name !</span>
+								</a>
 							}
 							else
 							{

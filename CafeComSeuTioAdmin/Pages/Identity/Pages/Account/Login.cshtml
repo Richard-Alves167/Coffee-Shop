@@ -19,9 +19,9 @@
 		<form id="account" method="post">
 			<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 			<div class="divInput">
-				<label asp-for="Input.Email" class="spanLogin">E-MAIL</label>
-				<input asp-for="Input.Email" class="inputLogin" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-				<span asp-validation-for="Input.Email" class="text-danger"></span>
+				<label asp-for="Input.Name" class="spanLogin">Username</label>
+				<input asp-for="Input.Name" class="inputLogin" autocomplete="username" aria-required="true" placeholder="My name" />
+				<span asp-validation-for="Input.Name" class="text-danger"></span>
 			</div>
 			<div class="divInput">
 				<label asp-for="Input.Password" class="spanLogin">SENHA</label>
