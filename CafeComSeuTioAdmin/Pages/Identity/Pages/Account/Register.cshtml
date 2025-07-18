@@ -19,9 +19,9 @@
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 			<div class="divInput">
-				<label asp-for="Input" class="spanLogin">Username</label>
-				<input asp-for="Input" class="inputLogin" autocomplete="username" aria-required="true" placeholder="My name" />
-				<span asp-validation-for="Input" class="text-danger"></span>
+                <label asp-for="Input.Name" class="spanLogin">Username</label>
+				<input asp-for="Input.Name" class="inputLogin" autocomplete="username" aria-required="true" placeholder="My name" />
+				<span asp-validation-for="Input.Name" class="text-danger"></span>
 			</div>
             <div class="divInput">
 				<label asp-for="Input.Email" class="spanLogin">Email</label>
