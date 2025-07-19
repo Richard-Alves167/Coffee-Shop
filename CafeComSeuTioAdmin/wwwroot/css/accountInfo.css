@@ -111,3 +111,168 @@
 .active {
     background-color: #AD641A;
 }
+
+.content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+    .profile hr {
+        width: 85%;
+        height: 3px;
+        color: #501F00;
+        opacity: 1;
+        justify-self: center;
+    }
+
+.principalUsuarioInfo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 50px;
+    padding-left: 10%;
+}
+
+.divImagemUsuario {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .divImagemUsuario img {
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        border: 3px solid #ffffff;
+        margin-bottom: 10px;
+    }
+
+    .divImagemUsuario span {
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+.divNomeUsuario {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+    .divNomeUsuario label {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .divNomeUsuario input {
+        border: none;
+        width: 100%;
+        height: 50px;
+        background-color: #7B3911;
+        border-radius: 10px;
+        border-bottom: 8px solid #3A1E01;
+        padding-left: 10px;
+        font-size: 26px;
+        color: #CC9A66;
+        margin-bottom: 10px;
+    }
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.spanLogin {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.inputLogin {
+    border: none;
+    width: 100%;
+    height: 50px;
+    background-color: #7B3911;
+    border-radius: 10px;
+    border-bottom: 8px solid #3A1E01;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #CC9A66;
+    margin-bottom: 10px;
+}
+
+.divInformacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.divContato {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divEndereco {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divRua {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rua {
+    width: 60%;
+}
+
+.numero {
+    width: 30%;
+}
+.botaoEdit {
+    width: 40%;
+    padding: 10px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471B00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+
+    .botaoEdit:hover {
+        background-color: #72340E;
+        border: solid 3px #471B00;
+        color: #f4a460;
+    }
+
