@@ -276,3 +276,114 @@
         color: #f4a460;
     }
 
+.order {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.topSection {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+    padding-left: 10%;
+}
+
+    .topSection img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .topSection span {
+        font-size: 28px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+.order hr {
+    width: 85%;
+    height: 3px;
+    color: #501F00;
+    opacity: 1;
+    justify-self: center;
+}
+
+.tabelaPedidos {
+    width: 90%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: left;
+    border-collapse: collapse;
+}
+
+    .tabelaPedidos tr {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        align-items: center;
+        justify-content: space-around;
+        border-collapse: collapse;
+        border-radius: 15px;
+    }
+
+    .tabelaPedidos tr th {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 20%;
+    }
+
+    .tabelaPedidos thead {
+        width: 100%;
+        height: 20%;
+        align-content: center;
+    }
+
+        .tabelaPedidos thead tr {
+            padding: 10px;
+            background-color: #AD641A;
+            font-weight: bold;
+            color: #501F00;
+        }
+
+    .tabelaPedidos tbody {
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: grid;
+        gap: 5px;
+        width: 100%;
+        height: 80%;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
+
+.tabelaPedidos tbody::-webkit-scrollbar-track {
+    background: #7B3911;
+}
+
+.tabelaPedidos tbody::-webkit-scrollbar-thumb {
+    background-color: #CC9A66;
+    border-radius: 20px;
+}
+
+        .tabelaPedidos tbody tr {
+            font-size: 16px;
+            height: 90px;
+            background-color: #361F10;
+            color: #FFB568;
+        }
+
+        .tabelaPedidos tbody tr:hover {
+            background-color: #501F00;
+        }
