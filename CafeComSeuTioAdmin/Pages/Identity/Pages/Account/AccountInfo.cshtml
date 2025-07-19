@@ -19,16 +19,16 @@
 	<aside class="sidebar">
 		<ul class="menu">
 			<li class="titleMenu"><img src="~/images/interface/iconMenu.png" />MENU</li>
-			<li class="titleSection"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
-			<li class="titleSection"><img src="~/images/interface/iconList.png" /> Pedidos</li>
-			<li class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
-			<li class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
-			<li class="titleSection active"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
+			<li onclick="openSection(this)" id="profile" class="titleSection active"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
+			<li onclick="openSection(this)" id="order" class="titleSection"><img src="~/images/interface/iconList.png" /> Pedidos</li>
+			<li onclick="openSection(this)" id="favorite" class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
+			<li onclick="openSection(this)" id="avaliation" class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
+			<li onclick="openSection(this)" id="information" class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
 		</ul>
 	</aside>
 
 	<div class="content">
-		<section class="profile" style="display:none">
+		<section class="profile" style="display:flex">
 			<div class="principalUsuarioInfo">
 				<div class="divImagemUsuario">
 					<img src="~/images/userPhoto/ZoeCiberpop.jpg" alt="Imagem de usuário">
@@ -132,7 +132,7 @@
 			</table>
 		</section>
 
-		<section class="order" style="display:none">
+		<section class="favorite" style="display:none">
 			<div class="topSection">
 				<img src="/images/interface/iconHeart.png" alt="Icone coração" />
 				<span>Seus Produtos Favoritos</span>
@@ -210,7 +210,7 @@
 			</div>
 		</section>
 
-		<section class="information" style="display:flex">
+		<section class="information" style="display:none">
 			<div class="topSection">
 				<img src="/images/interface/iconQuestionMark.png" alt="Icone interrogação" />
 				<span>Informações da Plataforma</span>
@@ -262,5 +262,4 @@
 		</section>
 	</div>
 </div>
-
-</div>
+<script src="~/js/accountInfo.js" asp-append-version="true"></script>
