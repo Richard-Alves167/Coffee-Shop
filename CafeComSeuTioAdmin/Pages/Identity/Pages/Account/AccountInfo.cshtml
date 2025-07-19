@@ -1,7 +1,28 @@
 ﻿@page
 @model CafeteriaKwai.Pages.Identity.Pages.Account.AccountInfoModel
 @{
-    ViewData["Title"] = "Account Info";
+	ViewData["Title"] = "Account Info";
 }
 
-<link rel="stylesheet" href="~/css/productOthers.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/accountInfo.css" asp-append-version="true" />
+
+<div class="header">
+	<div class="welcomeMensage">
+		<hr />
+		<img src="~/images/userPhoto/ZoeCiberpop.jpg"/>
+		<span>Bem-vindo Richard Alves !!</span>
+	</div>
+	<img src="~/images/banner/bannerAccount.png"/>
+</div>
+<div class="divPrincipal">
+	<aside class="sidebar">
+		<ul class="menu">
+			<li class="titleMenu"><img src="~/images/interface/iconList.png" />MENU</li>
+			<li class="titleSection active"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
+			<li class="titleSection"><img src="~/images/interface/iconList.png"/> Pedidos</li>
+			<li class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
+			<li class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
+			<li class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
+		</ul>
+	</aside>
+</div>

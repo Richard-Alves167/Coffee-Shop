@@ -1,1 +1,113 @@
-﻿
+﻿.header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #361F10;
+}
+
+    .header img {
+        height: 80%;
+    }
+
+.welcomeMensage {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+    .welcomeMensage img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        border: 3px solid #ffffff;
+    }
+
+    .welcomeMensage hr {
+        height: 100px;
+        width: 4px;
+        color: white;
+        opacity: 1;
+        justify-self: center;
+    }
+
+.divPrincipal {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: #361F10;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0px;
+}
+
+.titleMenu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffff;
+    background-color: #CC9A66;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+    .titleMenu img {
+        width: 50px;
+        height: 50px;
+    }
+
+.titleSection {
+    list-style: none;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #501F00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .titleSection:hover {
+        transform-box: border-box;
+        background-color: #AD641A;
+        border-top: solid 2px #ffffff;
+        border-bottom: solid 2px #ffffff;
+    }
+
+    .titleSection img {
+        width: 40px;
+        height: 40px;
+    }
+
+.active {
+    background-color: #AD641A;
+}
