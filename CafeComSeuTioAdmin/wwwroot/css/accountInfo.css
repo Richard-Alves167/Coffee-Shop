@@ -387,3 +387,15 @@
         .tabelaPedidos tbody tr:hover {
             background-color: #501F00;
         }
+
+.products {
+    width: 90%;
+    height: 65%;
+    overflow-y: auto;
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    place-items: anchor-center;
+    gap: 20px;
+    min-height: 60vh;
+}

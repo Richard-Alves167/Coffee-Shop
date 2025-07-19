@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/css/accountInfo.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/cardProduct.css" asp-append-version="true" />
 
 <div class="header">
 	<div class="welcomeMensage">
@@ -19,8 +20,8 @@
 		<ul class="menu">
 			<li class="titleMenu"><img src="~/images/interface/iconMenu.png" />MENU</li>
 			<li class="titleSection"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
-			<li class="titleSection active"><img src="~/images/interface/iconList.png" /> Pedidos</li>
-			<li class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
+			<li class="titleSection"><img src="~/images/interface/iconList.png" /> Pedidos</li>
+			<li class="titleSection active"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
 			<li class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
 			<li class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
 		</ul>
@@ -73,7 +74,7 @@
 			<button class="botaoEdit">EDITAR</button>
 		</section>
 
-		<section class="order">
+		<section class="order" style="display:none">
 			<div class="topSection">
 				<img src="/images/interface/iconList.png" alt="Icone lista" />
 				<span>Seus Pedidos</span>
@@ -127,43 +128,29 @@
 						<th>FINALIZADO</th>
 						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
 					</tr>
-					<tr>
-						<th>7253gwd4</th>
-						<th>12/12/12 12:12</th>
-						<th>R$ 25,94</th>
-						<th>FINALIZADO</th>
-						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
-					</tr>
-										<tr>
-						<th>7253gwd4</th>
-						<th>12/12/12 12:12</th>
-						<th>R$ 25,94</th>
-						<th>FINALIZADO</th>
-						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
-					</tr>
-										<tr>
-						<th>7253gwd4</th>
-						<th>12/12/12 12:12</th>
-						<th>R$ 25,94</th>
-						<th>FINALIZADO</th>
-						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
-					</tr>
-										<tr>
-						<th>7253gwd4</th>
-						<th>12/12/12 12:12</th>
-						<th>R$ 25,94</th>
-						<th>FINALIZADO</th>
-						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
-					</tr>
-					<tr>
-						<th>7253gwd4</th>
-						<th>12/12/12 12:12</th>
-						<th>R$ 25,94</th>
-						<th>FINALIZADO</th>
-						<th><img src="~/images/iconsAction/iconToOtherPage.png" alt="To other page" /></th>
-					</tr>
 				</tbody>
 			</table>
+		</section>
+
+		<section class="order">
+			<div class="topSection">
+				<img src="/images/interface/iconHeart.png" alt="Icone coração" />
+				<span>Seus Produtos Curtidos</span>
+			</div>
+
+			<hr>
+
+			<div class="products">
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+				<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+			</div>
 		</section>
 	</div>
 
