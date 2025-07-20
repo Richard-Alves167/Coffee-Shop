@@ -49,11 +49,11 @@
 								</a>
 							}
 						</div>
-						<a>
+						<a asp-page="/ShoppingCart">
 							<img src="~/images/iconsAction/carrinhoDeCompras.png" alt="carrinho de compras" />
 							@if (SignInManager.IsSignedIn(User))
 							{
-								<span class="productsInCart">(0)</span>
+								<span class="productsInCart">0</span>
 							}
 						</a>
 					</div>
