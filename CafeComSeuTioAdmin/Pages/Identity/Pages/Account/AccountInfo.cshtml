@@ -24,6 +24,12 @@
 			<li onclick="openSection(this)" id="favorite" class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
 			<li onclick="openSection(this)" id="avaliation" class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
 			<li onclick="openSection(this)" id="information" class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
+			<form asp-area="Identity" asp-page="/Account/Logout" method="post">
+				<button type="submit" class="botaoExit titleSection">
+					<img src="~/images/interface/iconExit.png" />
+					Sair
+				</button>
+			</form>
 		</ul>
 	</aside>
 
