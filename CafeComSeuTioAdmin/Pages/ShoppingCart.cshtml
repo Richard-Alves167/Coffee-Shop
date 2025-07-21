@@ -2,4 +2,142 @@
 @model CafeteriaKwai.Pages.ShoppingCartModel
 @{
 }
-<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/shoppingCart.css" asp-append-version="true" />
+
+<div class="cartContainer">
+	<div class="cart">
+		<div class="cart-header">
+			<span>Carrinho de Compras</span>
+		</div>
+
+		<div class="cart-items">
+			<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+						<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+						<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+						<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+						<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/images/menu/cake.png" alt="Bolo">
+				<div class="item-info">
+					<h4>BOLO REDVELVET BELGICANO</h4>
+					<span>DESSERT</span>
+				</div>
+				<div class="item-controls">
+					<span>R$ 8,99</span>
+					<div class="itemAmount">
+						<button class="qty-btn">-</button>
+						<span>3</span>
+						<button class="qty-btn">+</button>
+					</div>
+					<button class="remove-btn"><img src="/images/iconsAction/iconGarbage.png" alt="Lixeira" /></button>
+				</div>
+			</div>
+		</div>
+		<div class="cart-footer">
+			<span>PRODUTOS 5</span>
+		</div>
+	</div>
+
+	<div class="details">
+		<h2>DETALHES</h2>
+		<div class="detail-line"><span>PRODUTOS</span> <span>45,24</span></div>
+		<div class="detail-line"><span>TAXA</span> <span>3,00</span></div>
+		<div class="detail-line"><span>SUBTOTAL</span> <span>48,24</span></div>
+
+		<div class="method">
+			<span>MÉTODO DE PAGAMENTO</span>
+			<select>
+				<option value="creditCard">Cartão de Crédito</option>
+				<option value="debitCard">Cartão de Débito</option>
+				<option value="pix">PIX</option>
+			</select>
+		</div>
+		<div class="method">
+			<span>MÉTODO DE RETIRADA</span>
+			<select>
+				<option value="creditCard">Retirar em loja</option>
+				<option value="debitCard">Retirada programada em loja</option>
+				<option value="pix">Delivery</option>
+			</select>
+		</div>
+
+		<div class="detail-line highlight"><span>TOTAL</span> <span>R$ 48,24</span></div>
+
+		<button class="pay-btn">Pagar</button>
+	</div>
+</div>

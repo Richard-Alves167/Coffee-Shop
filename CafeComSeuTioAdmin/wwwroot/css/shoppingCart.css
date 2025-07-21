@@ -1,1 +1,222 @@
-﻿
+﻿.cartContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+}
+
+.cart {
+    width: 55%;
+    height: 80%;
+    background-color: #86471F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.cart-header {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #471B00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-items {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #652700;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .item img {
+        border: solid 3px #471B00;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+.item-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+    .item-info h4 {
+        color: #FFB568;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .item-info span {
+        color: #C9833B;
+        font-size: 14px;
+        color: #ddd;
+    }
+
+.item-controls {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-controls span {
+    color: #FFB568;
+    font-size: 20px;
+}
+
+.itemAmount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 5px #FFB568;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.qty-btn {
+    width: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+    .remove-btn img {
+        border: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+.cart-footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #471B00;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.details {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #471B00;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+    .details h2 {
+        font-size: 22px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+.detail-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.highlight {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.method {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+}
+
+.method span {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+    .method select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        margin: 8px 0;
+        cursor: pointer;
+        background: #652700;
+        border: solid 2px #FFB568;
+        color: #FFB568;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+
+.pay-btn {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471B00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+
+    .pay-btn:hover {
+        background-color: #72340E;
+        border: solid 3px #471B00;
+        color: #f4a460;
+    }
+
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #fff3;
+    border-radius: 10px;
+}
