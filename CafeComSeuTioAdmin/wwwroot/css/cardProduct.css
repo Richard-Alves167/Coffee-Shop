@@ -4,7 +4,7 @@
     text-align: center;
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -19,8 +19,23 @@
 
     .product-card p {
         color: #FFB568;
+        font-size: 1vw;
         font-weight: bold;
+        margin: 0px;
     }
+
+.cardProductAvaliation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardProductAvaliation img {
+    border: none;
+    width: 10%;
+}
 
 .cardPrecoVerMais {
     display: flex;

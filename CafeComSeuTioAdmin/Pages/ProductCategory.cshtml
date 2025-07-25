@@ -27,7 +27,7 @@
 				<img class="gifCategoryBanner" src="~/images/cats/gatoKit.gif" alt="Gato Kit" />
 				break;
 			}
-			default : {
+		default : {
 				<img class="gifCategoryBanner" src="~/images/cats/gatoFeitoDePudim.gif" alt="Gato Pudim" />
 				break;
 			}
@@ -68,10 +68,25 @@
 <section class="favoriteProductsSection">
 	<div class="divPatasGif"><img src="~/images/interface/patasGatoPDireitaMovimentoTransparente.gif" /></div>
 	<h3>GATINHOS ADORAM</h3>
-	<div class="products">
-		<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-		<div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-		<div class="product-card"><img src="~/images/menu/granola.png"><p>Bolo de Nozes</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+	<div class="products">		
+		@foreach (var product in Model.listaCategoriaProdutos)
+		{
+			<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card">
+				<img src="~/images/menu/@product.ImageFileName">
+				<div class="cardProductAvaliation">
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaVazia.png" alt="Estrela" />
+				</div>
+				<p>@product.Name</p>
+				<div class="cardPrecoVerMais">
+					<span class="cardPreco">R$ @product.Price</span>
+					<span class="cardVerMais">VER MAIS</span>
+				</div>
+			</a>
+		}
 	</div>
 </section>
 
@@ -151,7 +166,21 @@
 	}
 	<div class="products">
 		@foreach (var product in Model.listaCategoriaProdutos) {
-			<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card"><img src="~/images/menu/@product.ImageFileName"><p>@product.Name</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ @product.Price</span><span class="cardVerMais">VER MAIS</span></div></a>
+			<a asp-page="ProductDetailsClient" asp-route-id="@product.Id" class="product-card">
+				<img src="~/images/menu/@product.ImageFileName">
+				<div class="cardProductAvaliation">
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+					<img src="/images/iconsAction/estrelaVazia.png" alt="Estrela" />
+				</div>
+				<p>@product.Name</p>
+				<div class="cardPrecoVerMais">
+					<span class="cardPreco">R$ @product.Price</span>
+					<span class="cardVerMais">VER MAIS</span>
+				</div>
+			</a>
 		}
 	</div>
 </section>
