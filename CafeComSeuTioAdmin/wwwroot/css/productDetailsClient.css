@@ -234,15 +234,34 @@
         color: #FFB568;
     }
 
+.divPrincipal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: #FFDEAE;
+    padding-bottom: 80px;
+}
+
+    .divPrincipal hr {
+        width: 90%;
+        height: 3px;
+        background-color: #471B00;
+        opacity: 1;
+        justify-self: center;
+    }
+
 .gatoBrilhandoAvaliacao {
-    margin-top: -53vh;
+    margin-top: -8vw;
     margin-right: -50vw;
     height: 10vw;
     position: absolute;
 }
 
 .contaNaoLogada {
-    height: 40vh;
+    margin-top: 50px;
+    height: 250px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -252,7 +271,7 @@
 }
 
     .contaNaoLogada img {
-        height: 22vh;
+        height: 18vh;
     }
 
     .contaNaoLogada p {
@@ -260,3 +279,224 @@
         font-weight: bold;
         color: black;
     }
+
+.principal {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .principal aside {
+        width: 30%;
+    }
+
+.review {
+    width: 60%;
+    height: fit-content;
+}
+
+.ratingSummary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.productRate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: #5a3b24;
+}
+.ratingNumber {
+    font-size: 48px;
+}
+
+.stars img {
+    width: 10%;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.barDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+    .barDiv span {
+        font-size: 16px;
+        color: #5a3b24;
+    }
+
+.bar {
+    width: 85%;
+    background: #d6b89f;
+    height: 8px;
+    border-radius: 4px;
+    margin: 6px 0;
+    position: relative;
+}
+
+.barFill {
+    background: #5a3b24;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+    .filter span {
+        width: 100%;
+        text-align: center;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .filter button {
+        background: #5a3b24;
+        color: #fff;
+        font-weight: 500;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+        .filter button:hover {
+            background-color: #72340E;
+            border: solid 3px #471B00;
+            color: #f4a460;
+            transform-box: border-box;
+        }
+
+.sessaoAvaliacoesUsuarios {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.avaliacaoUsuario {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.avaliacaoUsuarioIcon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #5a3b24;
+    border-radius: 100%;
+}
+
+.avaliacaoUsuarioInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avaliacaoUsuarioNome {
+    color: black;
+    font-weight: bold;
+}
+
+.avaliacaoUsuarioTopo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avaliacaoUsuarioEstrelas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+    .avaliacaoUsuarioEstrelas img {
+        width: 20px;
+        height: 20px;
+    }
+
+.avaliacaoUsuarioData {
+    font-weight: bold;
+}
+
+.avaliacaoUsuarioMensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #bf9263;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+    .avaliacaoUsuarioMensagem h3 {
+        justify-content: left;
+        font-size: 18px;
+        font-weight: bold;
+        color: #471b00;
+        margin: 0px;
+    }
+
+    .avaliacaoUsuarioMensagem p {
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin: 0px;
+    }
+
+.avaliacaoUsuarioMidias {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+    .avaliacaoUsuarioMidias img {
+        height: 80px;
+        border-radius: 10px;
+        border: 3px solid #471b00;
+        cursor: pointer;
+    }
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .pagination span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #471b00;
+        border-radius: 50%;
+        margin: 0 4px;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+
+        .pagination span.active {
+            opacity: 1;
+        }

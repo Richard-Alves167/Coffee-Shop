@@ -5,72 +5,240 @@
 <link rel="stylesheet" href="~/css/productDetailsClient.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/cardProduct.css" asp-append-version="true" />
 <section class="product-top">
-    <img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="Bolo Holandês" class="main-image">
-    <div class="product-info">
-        <span class="avaliacao">
+	<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="Bolo Holandês" class="main-image">
+	<div class="product-info">
+		<span class="avaliacao">
 			<img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
-            <img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
-            <img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
-            <img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
-            <img src="~/images/iconsAction/estrelaVazia.png" class="estrelaAvaliacao" alt="Estrela">
-            </span>
-        <h2 class="nameProduct">@Model.selectProduct.Name</h2>
-        <p class="subtitle">@Model.selectProduct.ShortDescription</p>
-        <hr />
-        <div class="priceLike">
-            <div class="priceArea">
-                <span class="subPrice">R$ @Model.selectProduct.Price</span>
-                <span class="price">R$ @Model.selectProduct.Price</span>
-            </div>
-            <img src="~/images/iconsAction/coracaoCheio.png" class="coracaoLike"/>
-        </div>
-        <div class="modificarCarrinho">
-            <div class="modificarQuantidadeProduto">
-                <button>-</button>
-                <span id="numberOfProductCart">1</span>
-                <button>+</button>
-            </div>
-            <button class="add-cart">Adicionar ao Carrinho</button>
-        </div>
-        <hr />
-        <div class=moreImages>
-            <button>&lt</button>
-            <img id="imageSelected" src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
-            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
-            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
-            <img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
-            <button>&gt</button>
-        </div>
-    </div>
+			<img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+			<img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+			<img src="~/images/iconsAction/estrelaCheia.png" class="estrelaAvaliacao" alt="Estrela">
+			<img src="~/images/iconsAction/estrelaVazia.png" class="estrelaAvaliacao" alt="Estrela">
+		</span>
+		<h2 class="nameProduct">@Model.selectProduct.Name</h2>
+		<p class="subtitle">@Model.selectProduct.ShortDescription</p>
+		<hr />
+		<div class="priceLike">
+			<div class="priceArea">
+				<span class="subPrice">R$ @Model.selectProduct.Price</span>
+				<span class="price">R$ @Model.selectProduct.Price</span>
+			</div>
+			<img src="~/images/iconsAction/coracaoCheio.png" class="coracaoLike" />
+		</div>
+		<div class="modificarCarrinho">
+			<div class="modificarQuantidadeProduto">
+				<button>-</button>
+				<span id="numberOfProductCart">1</span>
+				<button>+</button>
+			</div>
+			<button class="add-cart">Adicionar ao Carrinho</button>
+		</div>
+		<hr />
+		<div class=moreImages>
+			<button>&lt</button>
+			<img id="imageSelected" src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+			<img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+			<img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+			<img src="~/images/menu/@Model.selectProduct.ImageFileName" class="imageExample" />
+			<button>&gt</button>
+		</div>
+	</div>
 </section>
 
 <section class="description">
-    <img src="~/images/cats/gatoComendoBolo.gif"/>
-    <div>
-        <h3>Descrição</h3>
-        <p>
-            @Model.selectProduct.Description
-        </p>
-    </div>
+	<img src="~/images/cats/gatoComendoBolo.gif" />
+	<div>
+		<h3>Descrição</h3>
+		<p>
+			@Model.selectProduct.Description
+		</p>
+	</div>
 </section>
 
 <section class="relatedProductsSection">
-    <div class="divPatasGif"><img src="~/images/interface/patasGatoPDireitaMovimentoTransparente.gif" /></div>
-    <h3>Produtos Relacionados</h3>
-    <div class="products">
-        <div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-        <div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-        <div class="product-card"><img src="~/images/menu/granola.png"><p>Bolo de Nozes</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-        <div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
-    </div>
-    <div class="divPatasGif"><img src="~/images/interface/patasGatoPEsquerdaMovimentoTransparente.gif" /></div>
+	<div class="divPatasGif"><img src="~/images/interface/patasGatoPDireitaMovimentoTransparente.gif" /></div>
+	<h3>Produtos Relacionados</h3>
+	<div class="products">
+		<div class="product-card"><img src="~/images/menu/berry-drizzle.png"><p>Red Velvet</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+		<div class="product-card"><img src="~/images/menu/cupcake.png"><p>Chocomousse</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+		<div class="product-card"><img src="~/images/menu/granola.png"><p>Bolo de Nozes</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+		<div class="product-card"><img src="~/images/menu/PumpkinBread.png"><p>Cheesecake</p><div class="cardPrecoVerMais"><span class="cardPreco">R$ 9,00</span><span class="cardVerMais">VER MAIS</span></div></div>
+	</div>
+	<div class="divPatasGif"><img src="~/images/interface/patasGatoPEsquerdaMovimentoTransparente.gif" /></div>
 </section>
 
 <section class="avaliationsSection">
-    <h3>AVALIAÇÕES</h3>
-    <div class="contaNaoLogada">
-        <img class="gatoBrilhandoAvaliacao" src="~/images/cats/gatoBrilhando.gif" alt="Gato Avaliando" />
-        <img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
-        <p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
-    </div>
+	<h3>AVALIAÇÕES</h3>
+	<div class="divPrincipal">
+		<img class="gatoBrilhandoAvaliacao" src="~/images/cats/gatoBrilhando.gif" alt="Gato Avaliando" />
+		<div class="contaNaoLogada">
+			<img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
+			<p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
+		</div>
+
+		<hr />
+
+		<div class="principal">
+			<aside>
+				<div class="ratingSummary">
+					<div class="productRate">
+						<div class="ratingNumber">4.7</div>
+						<div>
+							<div class="stars">
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+							</div>
+							<div>1.245 avaliações</div>
+						</div>
+					</div>
+					<div class="bars">
+						<div class="barDiv">
+							<div class="bar">
+								<div class="barFill" style="width: 80%"></div>
+							</div>
+							<span> 5 ★ </span>
+						</div>
+						<div class="barDiv">
+							<div class="bar">
+								<div class="barFill" style="width: 60%"></div>
+							</div>
+							<span> 4 ★ </span>
+						</div>
+						<div class="barDiv">
+							<div class="bar">
+								<div class="barFill" style="width: 30%"></div>
+							</div>
+							<span> 3 ★ </span>
+						</div>
+						<div class="barDiv">
+							<div class="bar">
+								<div class="barFill" style="width: 10%"></div>
+							</div>
+							<span> 2 ★ </span>
+						</div>
+						<div class="barDiv">
+							<div class="bar">
+								<div class="barFill" style="width: 5%"></div>
+							</div>
+							<span> 1 ★ </span>
+						</div>
+					</div>
+				</div>
+
+				<div class="filter">
+					<span>BUSCAR</span>
+					<button>5 estrelas ( 642 )</button>
+					<button>4 estrelas ( 82 )</button>
+					<button>3 estrelas ( 24 )</button>
+					<button>2 estrelas ( 13 )</button>
+					<button>1 estrela ( 11 )</button>
+					<button>Com comentários ( 431 )</button>
+					<button>Com mídia ( 51 )</button>
+				</div>
+			</aside>
+
+			<div class="sessaoAvaliacoesUsuarios">
+				<div class="avaliacaoUsuario">
+					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
+					<div class="avaliacaoUsuarioInfo">
+						<span class="avaliacaoUsuarioNome">Ahri K/DA</span>
+						<div class="avaliacaoUsuarioTopo">
+							<div class="avaliacaoUsuarioEstrelas">
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+							</div>
+							<span class="avaliacaoUsuarioData">12/12/12 12:12</span>
+						</div>
+						<div class="avaliacaoUsuarioMensagem">
+							<h3>Simplesmente maravilhoso!</h3>
+							<p>
+								O pedido chegou super bem embalado e fresquinho!O pedido
+								chegou super bem embalado e fresquinho!O pedido chegou super
+								bem embalado e fresquinho!O pedido chegou super bem embalado e
+								fresquinho!O pedido chegou super bem embalado e fresquinho!
+							</p>
+							<div class="avaliacaoUsuarioMidias">
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="avaliacaoUsuario">
+					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
+					<div class="avaliacaoUsuarioInfo">
+						<span class="avaliacaoUsuarioNome">Ahri K/DA</span>
+						<div class="avaliacaoUsuarioTopo">
+							<div class="avaliacaoUsuarioEstrelas">
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+							</div>
+							<span class="avaliacaoUsuarioData">12/12/12 12:12</span>
+						</div>
+						<div class="avaliacaoUsuarioMensagem">
+							<h3>Simplesmente maravilhoso!</h3>
+							<p>
+								O pedido chegou super bem embalado e fresquinho!O pedido
+								chegou super bem embalado e fresquinho!O pedido chegou super
+								bem embalado e fresquinho!O pedido chegou super bem embalado e
+								fresquinho!O pedido chegou super bem embalado e fresquinho!
+							</p>
+							<div class="avaliacaoUsuarioMidias">
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="avaliacaoUsuario">
+					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
+					<div class="avaliacaoUsuarioInfo">
+						<span class="avaliacaoUsuarioNome">Ahri K/DA</span>
+						<div class="avaliacaoUsuarioTopo">
+							<div class="avaliacaoUsuarioEstrelas">
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+							</div>
+							<span class="avaliacaoUsuarioData">12/12/12 12:12</span>
+						</div>
+						<div class="avaliacaoUsuarioMensagem">
+							<h3>Simplesmente maravilhoso!</h3>
+							<p>
+								O pedido chegou super bem embalado e fresquinho!O pedido
+								chegou super bem embalado e fresquinho!O pedido chegou super
+								bem embalado e fresquinho!O pedido chegou super bem embalado e
+								fresquinho!O pedido chegou super bem embalado e fresquinho!
+							</p>
+							<div class="avaliacaoUsuarioMidias">
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="pagination">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </section>
