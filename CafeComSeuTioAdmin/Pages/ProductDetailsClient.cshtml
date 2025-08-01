@@ -70,10 +70,56 @@
 	<h3>AVALIAÇÕES</h3>
 	<div class="divPrincipal">
 		<img class="gatoBrilhandoAvaliacao" src="~/images/cats/gatoBrilhando.gif" alt="Gato Avaliando" />
-		<div class="contaNaoLogada">
-			<img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
-			<p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
-		</div>
+		@if (true)
+		{
+			if (true)
+			{
+				<div class="containerContaAvaliacao contaLogadaSemAvaliacao">
+					<div class="avaliacaoUsuarioLogado">
+						<div class="divAvaliacaoUsuarioLogadoInfo">
+							<span>Estrelas</span>
+							<div class="estrelasAvaliacaoUsuarioLogado">
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
+								<img src="~/images/iconsAction/estrelaVazia.png" alt="Alternate Text" />
+							</div>
+							<span>Adicionar arquivos de mídia</span>
+							<div class="divAvaliacaoUsuarioLogadoMidia">
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+								<div class="add-btn">+</div>
+							</div>
+						</div>
+						<div class="divAvaliacaoUsuarioLogadoInfoTexto">
+							<span>Título</span>
+							<input type="text" placeholder="Digite aqui..." />
+							<span>Avaliação</span>
+							<textarea placeholder="Digite aqui..."></textarea>
+						</div>
+					</div>
+					<div class="avaliationButton">
+						<button>ENVIAR</button>
+					</div>
+				</div>
+			}
+			else
+			{
+				<div class="containerContaAvaliacao contaLogadaEditarAvaliacao">
+					<img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
+					<p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
+				</div>
+			}
+		}
+		else
+		{
+			<div class="containerContaAvaliacao contaNaoLogada">
+				<img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
+				<p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
+			</div>
+		}
 
 		<hr />
 
