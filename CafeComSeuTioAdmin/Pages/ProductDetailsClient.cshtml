@@ -74,6 +74,42 @@
 		{
 			if (true)
 			{
+				<div class="containerContaAvaliacao editarAvaliacaoUsuarioLogado">
+					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
+					<div class="editarAvaliacaoUsuarioInfo">
+						<span class="avaliacaoUsuarioNome">Ahri K/DA</span>
+						<div class="editarAvaliacaoUsuarioLogadoTopo">
+							<div class="editarAvaliacaoUsuarioEstrelas">
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+							</div>
+							<span class="avaliacaoUsuarioData">12/12/12 12:12</span>
+						</div>
+						<div class="editarAvaliacaoUsuarioMensagem">
+							<input type="text" value="Simplesmente maravilhoso!" />
+							<textarea>O pedido chegou super bem embalado e fresquinho!O pedido chegou super bem embalado e fresquinho!O pedido chegou super bem embalado e fresquinho!O pedido chegou super bem embalado e fresquinho!O pedido chegou super bem embalado e fresquinho!</textarea>
+						</div>
+					</div>
+					<div class="avaliacaoUsuarioLogadoMidia">
+						<span>Arquivos de mídia</span>
+						<div class="editarAvaliacaoUsuarioLogadoMidia">
+							<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							<img src="~/images/menu/@Model.selectProduct.ImageFileName" alt="" />
+							<button>+</button>
+						</div>
+					</div>
+				</div>
+				<div class="divAvaliationButton">
+					<button class="avaliationButtonDeletar">DELETAR</button>
+					<button class="avaliationButtonEditar">EDITAR</button>
+				</div>
+			}
+			else
+			{
 				<div class="containerContaAvaliacao contaLogadaSemAvaliacao">
 					<div class="avaliacaoUsuarioLogado">
 						<div class="divAvaliacaoUsuarioLogadoInfo">
@@ -100,16 +136,9 @@
 							<textarea placeholder="Digite aqui..."></textarea>
 						</div>
 					</div>
-					<div class="avaliationButton">
-						<button>ENVIAR</button>
-					</div>
 				</div>
-			}
-			else
-			{
-				<div class="containerContaAvaliacao contaLogadaEditarAvaliacao">
-					<img src="~/images/interface/IconSemContaLogada.png" alt="Gato Avaliando" />
-					<p>CRIE UMA CONTA PARA AVALIAR-NOS</p>
+				<div class="avaliationButton">
+					<button>ENVIAR</button>
 				</div>
 			}
 		}

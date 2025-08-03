@@ -294,6 +294,156 @@
     background-color: #FFDEAE;
 }
 
+.editarAvaliacaoUsuarioLogado {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.avaliacaoUsuarioIcon {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #5a3b24;
+    border-radius: 100%;
+}
+
+.editarAvaliacaoUsuarioInfo {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avaliacaoUsuarioNome {
+    color: black;
+    font-weight: bold;
+}
+
+.editarAvaliacaoUsuarioLogadoTopo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editarAvaliacaoUsuarioEstrelas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+    .editarAvaliacaoUsuarioEstrelas img {
+        width: 40px;
+        height: 40px;
+    }
+
+.editarAvaliacaoUsuarioMensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #bf9263;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+    .editarAvaliacaoUsuarioMensagem input {
+        border: none;
+        border-radius: 6px;
+        padding: 5px;
+        justify-content: left;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #d2b496;
+        color: #471b00;
+        margin: 0px;
+    }
+
+    .editarAvaliacaoUsuarioMensagem textarea {
+        resize: none;
+        border: none;
+        min-height: 100px;
+        border-radius: 6px;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #d2b496;
+        color: rgb(90, 90, 90);
+        margin: 0px;
+    }
+
+.avaliacaoUsuarioLogadoMidia {
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a3b24;
+}
+
+.editarAvaliacaoUsuarioLogadoMidia {
+    min-height: 50%;
+    display: grid;
+    grid: auto-flow / 2fr 2fr;
+    gap: 15px;
+    margin-top: 15px;
+    background-color: #bf9263;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+    .editarAvaliacaoUsuarioLogadoMidia img,
+    .editarAvaliacaoUsuarioLogadoMidia button {
+        width: 65px;
+        height: 65px;
+        object-fit: cover;
+        border-radius: 10px;
+        align-self: center;
+        border: 3px solid #471b00;
+        background-color: #d2b496;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+.divAvaliationButton {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10vw;
+}
+
+    .divAvaliationButton button {
+        padding: 10px;
+        padding-inline: 25px;
+        border: none;
+        border: solid 3px #471b00;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        box-sizing: border-box;
+        transform-box: content-box;
+    }
+
+        .divAvaliationButton button:hover {
+            background-color: #72340e;
+            border: solid 3px #471b00;
+            color: #f4a460;
+        }
+
+.avaliationButtonDeletar {
+    background-color: #880000;
+}
+
+.avaliationButtonEditar {
+    background-color: #471b00;
+}
+
 .avaliacaoUsuarioLogado {
     width: 100%;
     height: 300px;
@@ -385,6 +535,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    padding-right: 10vw;
 }
 
     .avaliationButton button {
@@ -395,7 +546,7 @@
         border: solid 3px #471b00;
         border-radius: 10px;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: bold;
         cursor: pointer;
         box-sizing: border-box;
@@ -416,7 +567,7 @@
 }
 
     .principal aside {
-        width: 30%;
+        width: 25%;
     }
 
 .review {
@@ -436,6 +587,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
+    text-align-last: center;
     justify-content: space-evenly;
     font-weight: bold;
     color: #5a3b24;
@@ -467,7 +620,7 @@
     }
 
 .bar {
-    width: 85%;
+    width: 80%;
     background: #d6b89f;
     height: 8px;
     border-radius: 4px;
