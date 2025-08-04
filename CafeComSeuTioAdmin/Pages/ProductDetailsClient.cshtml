@@ -72,7 +72,7 @@
 		<img class="gatoBrilhandoAvaliacao" src="~/images/cats/gatoBrilhando.gif" alt="Gato Avaliando" />
 		@if (true)
 		{
-			if (false)
+			if (true)
 			{
 				<div class="containerContaAvaliacao editarAvaliacaoUsuarioLogado">
 					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
@@ -80,11 +80,26 @@
 						<span class="avaliacaoUsuarioNome">Ahri K/DA</span>
 						<div class="editarAvaliacaoUsuarioLogadoTopo">
 							<div class="editarAvaliacaoUsuarioEstrelas">
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Estrela" />
+								<input class="inputStar" type="radio" name="starValue" id="editStarInputValue1" value="1" onclick="EditStarAvaliation(this)" />
+								<input class="inputStar" type="radio" name="starValue" id="editStarInputValue2" value="2" onclick="EditStarAvaliation(this)" />
+								<input class="inputStar" type="radio" name="starValue" id="editStarInputValue3" value="3" onclick="EditStarAvaliation(this)" />
+								<input class="inputStar" type="radio" name="starValue" id="editStarInputValue4" value="4" onclick="EditStarAvaliation(this)" />
+								<input class="inputStar" type="radio" name="starValue" id="editStarInputValue5" value="5" onclick="EditStarAvaliation(this)" />
+								<label for="editStarInputValue1">
+									<img src="/images/iconsAction/estrelaVazia.png" id="editStarImgValue1" />
+								</label>
+								<label for="editStarInputValue2">
+									<img src="/images/iconsAction/estrelaVazia.png" id="editStarImgValue2" />
+								</label>
+								<label for="editStarInputValue3">
+									<img src="/images/iconsAction/estrelaVazia.png" id="editStarImgValue3" />
+								</label>
+								<label for="editStarInputValue4">
+									<img src="/images/iconsAction/estrelaVazia.png" id="editStarImgValue4" />
+								</label>
+								<label for="editStarInputValue5">
+									<img src="/images/iconsAction/estrelaVazia.png" id="editStarImgValue5" />
+								</label>
 							</div>
 							<span class="avaliacaoUsuarioData">12/12/12 12:12</span>
 						</div>

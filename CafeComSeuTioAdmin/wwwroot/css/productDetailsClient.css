@@ -330,12 +330,19 @@
 .editarAvaliacaoUsuarioEstrelas {
     display: flex;
     flex-direction: row;
+    margin-top: -10px;
+    justify-content: left;
     gap: 10px;
 }
 
-    .editarAvaliacaoUsuarioEstrelas img {
+    .editarAvaliacaoUsuarioEstrelas input {
+        display: none;
+    }
+
+    .editarAvaliacaoUsuarioEstrelas label img {
         width: 40px;
         height: 40px;
+        cursor: pointer;
     }
 
 .editarAvaliacaoUsuarioMensagem {
