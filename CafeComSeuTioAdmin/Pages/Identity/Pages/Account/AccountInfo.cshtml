@@ -6,6 +6,7 @@
 
 <link rel="stylesheet" href="~/css/accountInfo.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/cardProduct.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/loadContainer.css" asp-append-version="true" />
 
 <div class="header">
 	<div class="welcomeMensage">
@@ -19,11 +20,11 @@
 	<aside class="sidebar">
 		<ul class="menu">
 			<li class="titleMenu"><img src="~/images/interface/iconMenu.png" />MENU</li>
-			<li onclick="openSection(this)" id="profile" class="titleSection active"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
-			<li onclick="openSection(this)" id="order" class="titleSection"><img src="~/images/interface/iconList.png" /> Pedidos</li>
-			<li onclick="openSection(this)" id="favorite" class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
-			<li onclick="openSection(this)" id="avaliation" class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
-			<li onclick="openSection(this)" id="information" class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
+			<li onclick="Loading(); openSection(this)" id="profile" class="titleSection active"><img src="~/images/interface/profileAccountImage.png" /> Perfil</li>
+			<li onclick="Loading(); openSection(this)" id="order" class="titleSection"><img src="~/images/interface/iconList.png" /> Pedidos</li>
+			<li onclick="Loading(); openSection(this)" id="favorite" class="titleSection"><img src="~/images/interface/iconHeart.png" /> Favoritos</li>
+			<li onclick="Loading(); openSection(this)" id="avaliation" class="titleSection"><img src="~/images/interface/iconStar.png" /> Avaliações</li>
+			<li onclick="Loading(); openSection(this)" id="information" class="titleSection"><img src="~/images/interface/iconQuestionMark.png" /> Informações</li>
 			<form asp-area="Identity" asp-page="/Account/Logout" method="post">
 				<button type="submit" class="botaoExit titleSection">
 					<img src="~/images/interface/iconExit.png" />
@@ -268,4 +269,5 @@
 		</section>
 	</div>
 </div>
+<script src="~/js/loadContainer.js" asp-append-version="true"></script>
 <script src="~/js/accountInfo.js" asp-append-version="true"></script>
