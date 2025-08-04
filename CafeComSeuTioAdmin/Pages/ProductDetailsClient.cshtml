@@ -72,7 +72,7 @@
 		<img class="gatoBrilhandoAvaliacao" src="~/images/cats/gatoBrilhando.gif" alt="Gato Avaliando" />
 		@if (true)
 		{
-			if (true)
+			if (false)
 			{
 				<div class="containerContaAvaliacao editarAvaliacaoUsuarioLogado">
 					<img src="~/images/userPhoto/ZoeCiberpop.jpg" class="avaliacaoUsuarioIcon" />
@@ -115,11 +115,28 @@
 						<div class="divAvaliacaoUsuarioLogadoInfo">
 							<span>Estrelas</span>
 							<div class="estrelasAvaliacaoUsuarioLogado">
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
-								<img src="~/images/iconsAction/estrelaCheia.png" alt="Alternate Text" />
-								<img src="~/images/iconsAction/estrelaVazia.png" alt="Alternate Text" />
+								<div class="novaAvaliacaoUsuarioEstrelas">
+									<input class="inputStar" type="radio" name="starValue" id="newStarInputValue1" value="1" onclick="NewStarAvaliation(this)" />
+									<input class="inputStar" type="radio" name="starValue" id="newStarInputValue2" value="2" onclick="NewStarAvaliation(this)" />
+									<input class="inputStar" type="radio" name="starValue" id="newStarInputValue3" value="3" onclick="NewStarAvaliation(this)" />
+									<input class="inputStar" type="radio" name="starValue" id="newStarInputValue4" value="4" onclick="NewStarAvaliation(this)" />
+									<input class="inputStar" type="radio" name="starValue" id="newStarInputValue5" value="5" onclick="NewStarAvaliation(this)" />
+									<label for="newStarInputValue1">
+										<img for="newStarInputValue1" src="/images/iconsAction/estrelaVazia.png" id="newStarImgValue1" />
+									</label>
+									<label for="newStarInputValue2">
+										<img src="/images/iconsAction/estrelaVazia.png" id="newStarImgValue2" />
+									</label>
+									<label for="newStarInputValue3">
+										<img src="/images/iconsAction/estrelaVazia.png" id="newStarImgValue3" />
+									</label>
+									<label for="newStarInputValue4">
+										<img src="/images/iconsAction/estrelaVazia.png" id="newStarImgValue4" />
+									</label>
+									<label for="newStarInputValue5">
+										<img src="/images/iconsAction/estrelaVazia.png" id="newStarImgValue5" />
+									</label>
+								</div>
 							</div>
 							<span>Adicionar arquivos de mídia</span>
 							<div class="divAvaliacaoUsuarioLogadoMidia">
@@ -317,3 +334,4 @@
 
 	</div>
 </section>
+<script src="~/js/productDetailsClient.js"></script>
