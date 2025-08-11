@@ -1,4 +1,21 @@
-﻿.header {
+﻿body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-track {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f4a460;
+    border-radius: 20px;
+}
+
+.header {
     width: 100%;
     height: 150px;
     display: flex;
@@ -454,6 +471,200 @@
 .deleteAdressButton {
     background-color: #740606;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+#adressContainer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5a3b24a1;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    transform-box: border-box;
+    text-align: left;
+}
+
+    #adressContainer label {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 550;
+        color: white;
+    }
+
+    #adressContainer input {
+        border: none;
+        height: 40px;
+        background-color: #471b00;
+        border-radius: 10px;
+        border-bottom: 8px solid #cc9a66;
+        padding-left: 10px;
+        font-size: 16px;
+        color: #cc9a66;
+        margin-bottom: 10px;
+    }
+
+    #adressContainer textarea {
+        resize: none;
+        border: none;
+        width: 100%;
+        height: 100px;
+        background-color: #471b00;
+        border-radius: 10px;
+        border-bottom: 8px solid #cc9a66;
+        padding: 10px;
+        font-size: 18px;
+        color: #cc9a66;
+        margin-bottom: 10px;
+    }
+
+        #adressContainer textarea::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #adressContainer textarea::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        #adressContainer textarea::-webkit-scrollbar-track {
+            background: none;
+        }
+
+        #adressContainer textarea::-webkit-scrollbar-thumb {
+            background-color: #f4a460;
+            border-radius: 20px;
+        }
+
+.adressWindow {
+    height: fit-content;
+    width: 60%;
+    max-width: 600px;
+    background-color: #805734;
+    border-radius: 15px;
+    border: 2px solid #ffb568;
+    justify-content: space-around;
+}
+
+.adressWindowTop {
+    padding-inline: 20px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #361f10;
+    border-bottom: 2px solid #ffb568;
+    color: white;
+}
+
+    .adressWindowTop span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .adressWindowTop button {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+.adressWindowPrincipal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divRowInput {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.divAdressName {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressCEP {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressState {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressCity {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressStreet {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressNumber {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divAdressComplement {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.newAdressButton {
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471b00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+
+    .newAdressButton:hover {
+        background-color: #72340e;
+        border: solid 3px #471b00;
+        color: #f4a460;
+    }
 
 .botaoEdit {
     width: 40%;

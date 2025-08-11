@@ -115,7 +115,54 @@
 								</div>
 							</div>
 						</div>
-						<button class="addAdressAccountButton">ADICIONAR</button>
+						<button class="addAdressAccountButton" onclick="OpenAddAdressContainer()">ADICIONAR</button>
+
+						<div id="adressContainer">
+							<div class="adressWindow">
+								<div class="adressWindowTop">
+									<span>Adicionar um endereço de entrega</span>
+									<button onclick="CloseAddAdressContainer()">X</button>
+								</div>
+								<div class="adressWindowPrincipal">
+									<div class="divRowInput">
+										<div class="divAdressName">
+											<label for="adressName">Nome</label>
+											<input type="text" id="adressName" />
+										</div>
+										<div class="divAdressCEP">
+											<label for="adressCEP">Endereço (CEP)</label>
+											<input type="number" id="adressCEP" />
+										</div>
+									</div>
+									<div class="divRowInput">
+										<div class="divAdressState">
+											<label for="adressState">Estado</label>
+											<input type="text" id="adressState" />
+										</div>
+										<div class="divAdressCity">
+											<label for="adressCity">Cidade</label>
+											<input type="text" id="adressCity" />
+										</div>
+									</div>
+									<div class="divRowInput">
+										<div class="divAdressStreet">
+											<label for="adressStreet">Rua</label>
+											<input type="text" id="adressStreet" />
+										</div>
+										<div class="divAdressNumber">
+											<label for="adressStreetNumber">Número</label>
+											<input type="number" id="adressStreetNumber" />
+										</div>
+									</div>
+									<div class="divAdressComplement">
+										<label for="adressComplement">Complemento</label>
+										<textarea id="adressComplement"></textarea>
+									</div>
+									<button class="newAdressButton">Adicionar</button>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>

@@ -52,3 +52,13 @@ function CloseAdressInfoContainer(buttonChield) {
     let parentElementContainer = parentElement.parentNode;
     parentElementContainer.style.display = "none";
 }
+
+function OpenAddAdressContainer() {
+    let adressContainer = document.getElementById("adressContainer");
+    adressContainer.style.display = "flex";
+}
+
+function CloseAddAdressContainer() {
+    let adressContainer = document.getElementById("adressContainer");
+    adressContainer.style.display = "none";
+}
