@@ -244,26 +244,112 @@
     flex-direction: column;
 }
 
-.divEndereco {
-    width: 40%;
+.divEnderecos {
+    text-align: center;
+}
+
+.adressAccountDiv {
+    height: 90%;
+    width: 300px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #bf9263;
+    border-radius: 15px;
+    color: white;
 }
 
-.divRua {
+    .adressAccountDiv hr {
+        width: 85%;
+        margin: 5px;
+        height: 3px;
+        background-color: #471b00;
+        opacity: 1;
+        justify-self: center;
+    }
+
+.adressesAccount {
+    height: 100px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 5px;
+    align-items: center;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    .adressesAccount::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .adressesAccount::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    .adressesAccount::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    .adressesAccount::-webkit-scrollbar-thumb {
+        background-color: #3a1e01da;
+        border-radius: 20px;
+    }
+
+.adressAccount {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: #7b3911;
+    padding: 5px;
 }
 
-.rua {
+.adressAccountSeeMoreButonn {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    color: #CC9A66;
+    font-weight: bold;
+}
+
+.adressAccount h1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.adressAccount hr {
+    width: 85%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 1;
+    justify-self: center;
+}
+
+.addAdressAccountButton {
     width: 60%;
+    padding: 10px;
+    place-self: anchor-center;
+    background-color: #471b00;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
 }
 
-.numero {
-    width: 30%;
-}
 .botaoEdit {
     width: 40%;
     padding: 10px;
