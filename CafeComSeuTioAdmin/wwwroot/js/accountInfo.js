@@ -40,3 +40,15 @@ function openSection(menuOption) {
 
     menuOption.classList.add('active');
 }
+
+function OpenAdressInfoContainer(buttonChield) {
+    let parentElement = buttonChield.parentNode;
+    let adressInfoContainer = parentElement.querySelector(":last-child");
+    adressInfoContainer.style.display = "flex";
+}
+
+function CloseAdressInfoContainer(buttonChield) {
+    let parentElement = buttonChield.parentNode.parentNode;
+    let parentElementContainer = parentElement.parentNode;
+    parentElementContainer.style.display = "none";
+}

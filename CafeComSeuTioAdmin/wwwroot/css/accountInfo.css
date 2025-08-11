@@ -325,7 +325,7 @@
 
 .adressAccount h1 {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .adressAccount hr {
@@ -348,6 +348,111 @@
     cursor: pointer;
     box-sizing: border-box;
     transform-box: content-box;
+}
+
+.adressAccountInfoContainer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5a3b24a1;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    transform-box: border-box;
+}
+
+.adressAccountInfoWindow {
+    color: white;
+    height: fit-content;
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #7b3911;
+    border-radius: 15px;
+    border: 2px solid #cc9a66;
+}
+
+.adressAccountInfoWindow {
+    height: fit-content;
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background-color: #7b3911;
+    border-radius: 15px;
+    border: 2px solid #cc9a66;
+    color: white;
+}
+
+    .adressAccountInfoWindow h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-content: center;
+        font-size: 30px;
+        color: #e5c5a2;
+    }
+
+    .adressAccountInfoWindow p {
+        padding-left: 20px;
+        text-align: left;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .adressAccountInfoWindow span {
+        font-size: 20px;
+        color: #e5c5a2;
+        margin: 0;
+    }
+
+    .adressAccountInfoWindow hr {
+        width: 100%;
+        height: 2px;
+        align-self: anchor-center;
+        background-color: white;
+        opacity: 1;
+        justify-self: center;
+    }
+
+.adressAccountInfoButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.adressAccountInfoButtons button {
+    min-width: 100px;
+    width: 30%;
+    padding: 10px;
+    padding-inline: 15px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.closeAdressInfoButton {
+    background-color: #AD641A;
+}
+
+.deleteAdressButton {
+    background-color: #740606;
 }
 
 .botaoEdit {
