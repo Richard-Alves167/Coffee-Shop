@@ -1,11 +1,10 @@
-# Projeto de Conclusão de disciplina.
-### Desenvolvimento ASP.NET com Razor Pages e Entity FrameWork.
+# Projeto de Conclusão de disciplina. (Em andamento...)
+<img src='BannerCafeKwai.jpg'>
 
-## ☕🐱 Projeto KwaiCafe – Cafeteria Temática com ASP.NET e Entity Framework
+## ☕🐱 Projeto KwaiCafe – Cafeteria Temática com ASP.NET Razor Pages e Entity Framework
 Um cantinho aconchegante onde o aroma do café recém-passado se mistura com o charme felino. Inspirada no universo dos gatos,
 curiosos e carinhosos na medida certa, nossa cafeteria foi criada para ser um refúgio tranquilo no seu dia,
 como o colo quentinho que um gatinho procura ao entardecer.
-</p>
 
 # Funcionalidades do Sistema
 ## 👥 Área pública (visitantes)
@@ -16,26 +15,26 @@ como o colo quentinho que um gatinho procura ao entardecer.
 - Página dedicada a decoração de gatos temáticos da cafeteria, com sessão para curtir uma música.
 
 - Criação de contas para agendas, delivery, e retirada na cafeteria.
-  
-- Formulário de contato e formulário de reserva de mesas.
+
+- Criação de avaliações para os produtos.
 
 ## 🔐 Área administrativa (restrita)
 - Login de administrador.
 
 - CRUD completo para produtos do cardápio (cadastrar, revisar, editar, remover).
 
-- Gerenciamento de perfis (nome, idade, fotos, curiosidades).
+- Gerenciamento de perfis.
 
 - Visualização de pedidos realizados.
 
 ## Tecnologias Utilizadas
 - C# – Linguagem principal de backend.
 
-- ASP.NET Core MVC – Framework web para estruturação de páginas, rotas e lógica de interface.
+- ASP.NET Core – Framework web para estruturação de páginas, rotas e lógica de interface.
 
 - Entity Framework Core – Mapeamento objeto-relacional (ORM) para facilitar o acesso ao banco de dados.
 
-- SQL Server (ou SQLite) – Banco de dados relacional para armazenar informações dos produtos, usuários e pedidos.
+- SQL Server – Banco de dados relacional para armazenar informações dos produtos, usuários e pedidos.
 
 - Razor Pages / Views – Templates dinâmicos para a exibição de conteúdo.
 
@@ -43,14 +42,18 @@ como o colo quentinho que um gatinho procura ao entardecer.
 
 - JavaScript – Para interações dinâmicas no Front-End.
 
-### Modelagem de Dados (Entity Framework) para SQLServer (futura mudança para SQLite)
+### Modelagem de Dados (Entity Framework) para SQLServer
 ## Principais entidades mapeadas:
 
 - Produto (Id, Nome, Preco, Descricao, Pequena descrição, Categoria, Imagem)
 
-- Usuario (Id, Nome, Email, CPF, Endereço(CEP), SenhaHash)
+- Usuario (Id, Nome, Icone de usuário, Email, SenhaHash)
+
+- Endereço (UsuarioId FK, Apelido, Endereço(CEP), Estado, Cidade, Rua, Número, Complemento)
 
 - Pedido (Id, UsuarioId, Data, Total, Status)
+  
+- Avaliação (ProdutoId, UsuarioId, Avaliação, Título, Texto, Imagens)
 
 - ItemPedido (Id, PedidoId, ProdutoId, Quantidade)
 
