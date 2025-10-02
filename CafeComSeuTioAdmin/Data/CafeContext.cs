@@ -10,6 +10,17 @@ public class IdentidadeContext : Microsoft.AspNetCore.Identity.EntityFrameworkCo
         : base(options) {
     }
 }
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser> {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options) {
+    }
+    protected override void OnModelCreating(ModelBuilder builder) {
+        base.OnModelCreating(builder);
+        builder.Entity<ApplicationUser>(entity => {
+            entity.Property(i => i.UserImageFileName).HasDefaultValue("Default_UserImage.png");
+        });
+    }
+}
 public class CafeContext : DbContext {
     public CafeContext(DbContextOptions<CafeContext> options) : base(options) { }
     public DbSet<Product> Products { get; set; }

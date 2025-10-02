@@ -14,6 +14,8 @@ builder.Services.AddDbContext<CafeContext>(
 builder.Services.AddDbContext<IdentidadeContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+   options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
 builder.Services.AddDefaultIdentity<IdentityUser>(
     options => options.SignIn.RequireConfirmedAccount = true)
