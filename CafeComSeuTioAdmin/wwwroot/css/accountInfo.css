@@ -187,7 +187,7 @@ body::-webkit-scrollbar-thumb {
         height: 120px;
         border-radius: 100px;
         border: 3px solid #ffffff;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .divImagemUsuario span {
@@ -196,12 +196,42 @@ body::-webkit-scrollbar-thumb {
         font-weight: bold;
     }
 
-.divNomeUsuario {
-    height: 100%;
+.buttonSelectImagemUsuario {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    border: none;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: #535251;
+    cursor: pointer;
+    position: absolute;
+    margin-bottom: -50px;
+    margin-right: -60px;
 }
+
+    .buttonSelectImagemUsuario img {
+        width: 30px;
+        height: 30px;
+        margin: 0px;
+        border-radius: 0px;
+        border: none;
+    }
+
+    .buttonSelectImagemUsuario:hover .divImagemUsuario img {
+        border: 10px solid #FFB568;
+        display: none;
+    }
+
+    .divNomeUsuario {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .divNomeUsuario label {
         font-size: 20px;
@@ -246,6 +276,126 @@ body::-webkit-scrollbar-thumb {
     font-size: 18px;
     color: #CC9A66;
     margin-bottom: 10px;
+}
+
+#containerSelectUserImage {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5a3b24a1;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    transform-box: border-box;
+    text-align: left;
+}
+
+    #containerSelectUserImage label {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 550;
+        color: white;
+    }
+
+    #containerSelectUserImage input {
+        border: none;
+        height: 40px;
+        background-color: #471b00;
+        border-radius: 10px;
+        border-bottom: 8px solid #cc9a66;
+        padding-left: 10px;
+        font-size: 16px;
+        color: #cc9a66;
+        margin-bottom: 10px;
+        align-content: center;
+        cursor: pointer;
+    }
+
+        #containerSelectUserImage input::file-selector-button {
+            display: none;
+        }
+
+.selectUserImageWindow {
+    height: fit-content;
+    width: fit-content;
+    max-width: 600px;
+    background-color: #805734;
+    border-radius: 15px;
+    border: 2px solid #ffb568;
+    justify-content: space-around;
+}
+
+.selectUserImageWindowTop {
+    padding-inline: 20px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #361f10;
+    border-bottom: 2px solid #ffb568;
+    color: white;
+}
+
+    .selectUserImageWindowTop span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .selectUserImageWindowTop button {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+.selectUserImageWindowPrincipal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divSelectUserImage {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectUserImageButton {
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    place-self: anchor-center;
+    background-color: #f4a460;
+    border: none;
+    border: solid 3px #471b00;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transform-box: content-box;
+}
+
+#previaImagemSelecionada {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
 }
 
 .divInformacoes {

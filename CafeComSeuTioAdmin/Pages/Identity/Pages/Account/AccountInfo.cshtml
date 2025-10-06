@@ -39,11 +39,36 @@
 			<div class="principalUsuarioInfo">
 				<div class="divImagemUsuario">
 					<img src="~/images/userPhoto/ZoeCiberpop.jpg" alt="Imagem de usuário">
+					<button class="buttonSelectImagemUsuario" onclick="OpenImageIconUser()">
+						<img src="~/images/iconsAction/camera.png" />
+					</button>
 					<span>Imagem de usuário</span>
+					<div id="containerSelectUserImage">
+						<div class="selectUserImageWindow">
+							<div class="selectUserImageWindowTop">
+								<span>Selecionar ícone de perfil</span>
+								<button onclick="CloseImageIconUser()">X</button>
+							</div>
+							<div class="selectUserImageWindowPrincipal">
+								<div class="divSelectUserImage">
+									<label for="userImage">Imagem de Perfil: </label>
+									<input type="file"
+										   id="userImage"
+										   oninput="VisualizarImagemSelecionada(this, 'previaImagemSelecionada')"
+										   accept="image/*" />
+									<img id="previaImagemSelecionada" alt="Imagem selecionada" />
+								</div>
+								<button class="selectUserImageButton"
+										onclick="CloseImageIconUser()">
+									Selecionar imagem
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="divNomeUsuario">
 					<label class="spanLogin">Nome de Usuario</label>
-					<input class="inputLogin" disabled value="Richard Alves">
+					<input class="inputLogin" disabled value="Richard Alves" />
 				</div>
 			</div>
 

@@ -41,6 +41,31 @@ function openSection(menuOption) {
     menuOption.classList.add('active');
 }
 
+function OpenImageIconUser() {
+    let containerDiv = document.getElementById("containerSelectUserImage");
+    containerDiv.style.display = "flex";
+}
+
+function CloseImageIconUser() {
+    let containerDiv = document.getElementById("containerSelectUserImage");
+    containerDiv.style.display = "none";
+}
+
+function VisualizarImagemSelecionada(inputFile, idTagImg) {
+    tagImage = document.getElementById(idTagImg);
+    inputFile.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) {
+            tagImage.style.display = "none";
+            return;
+        }
+
+        const url = URL.createObjectURL(file);
+        tagImage.style.display = "flex";
+        tagImage.src = url;
+    });
+}
+
 function OpenAdressInfoContainer(buttonChield) {
     let parentElement = buttonChield.parentNode;
     let adressInfoContainer = parentElement.querySelector(":last-child");
