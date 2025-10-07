@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CafeteriaKwai.Migrations.ApplicationDb
 {
     /// <inheritdoc />
-    public partial class AddApplicationUser : Migration
+    public partial class CriationOfApplicationUSer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

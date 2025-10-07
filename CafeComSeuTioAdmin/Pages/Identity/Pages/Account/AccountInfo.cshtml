@@ -1,6 +1,11 @@
 ﻿@page
+@using CafeteriaKwai.Data.Models;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @model CafeteriaKwai.Pages.Identity.Pages.Account.AccountInfoModel
 @{
+	var signedUser = await UserManager.GetUserAsync(User);
 	ViewData["Title"] = "Account Info";
 }
 
@@ -11,8 +16,8 @@
 <div class="header">
 	<div class="welcomeMensage">
 		<hr />
-		<img src="~/images/userPhoto/ZoeCiberpop.jpg" />
-		<span>Bem-vindo Richard Alves !!</span>
+		<img src="~/images/userPhoto/@signedUser.UserImageFileName" />
+		<span>Bem-vindo @signedUser.UserName !!</span>
 	</div>
 	<img src="~/images/banner/bannerAccount.png" />
 </div>
@@ -38,7 +43,7 @@
 		<section class="profile" style="display:flex">
 			<div class="principalUsuarioInfo">
 				<div class="divImagemUsuario">
-					<img src="~/images/userPhoto/ZoeCiberpop.jpg" alt="Imagem de usuário">
+					<img src="~/images/userPhoto/@signedUser.UserImageFileName" alt="Imagem de usuário">
 					<button class="buttonSelectImagemUsuario" onclick="OpenImageIconUser()">
 						<img src="~/images/iconsAction/camera.png" />
 					</button>
@@ -78,11 +83,15 @@
 				<div class="divContato">
 					<div class="divInput">
 						<label class="spanLogin">E-mail</label>
-						<input class="inputLogin" type="text" disabled value="richard@gmail.com">
+						<input class="inputLogin" type="text" disabled value="@signedUser.Email">
 					</div>
 					<div class="divInput">
 						<label class="spanLogin">Telefone</label>
-						<input class="inputLogin" type="text" disabled value="(00) 00000-0000">
+						@if (signedUser.PhoneNumber != null) {
+							<input class="inputLogin" type="text" disabled value="signedUser.PhoneNumber">
+						} else {
+							<input class="inputLogin" type="text" disabled value="Não inserido">
+						}
 					</div>
 				</div>
 				<div class="divEnderecos">

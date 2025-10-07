@@ -2,6 +2,7 @@
 using CafeteriaKwai.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using CafeteriaKwai.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,16 +12,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<CafeContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
-builder.Services.AddDbContext<IdentidadeContext>(options =>
-   options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
+//builder.Services.AddDbContext<IdentidadeContext>(options =>
+//   options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("WiredBrain")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(
+builder.Services.AddDefaultIdentity<ApplicationUser>(
     options => options.SignIn.RequireConfirmedAccount = true)
      .AddRoles<IdentityRole>()
-     .AddEntityFrameworkStores<IdentidadeContext>();
+     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.ConfigureApplicationCookie(options => {
     options.Cookie.Name = ".Cafecom.Authentication"; ;
@@ -29,7 +30,9 @@ builder.Services.ConfigureApplicationCookie(options => {
     options.LoginPath = "/Identity/Account/Login"; // ← opcional, se quiser definir uma página de login customizada
 });
 
-//builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+
+//builder.Services.AddDefaultIdentity<
+//>(options =>
 //    options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<CafeContext>();
 

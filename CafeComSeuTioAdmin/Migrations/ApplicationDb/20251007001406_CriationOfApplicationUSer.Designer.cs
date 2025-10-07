@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CafeteriaKwai.Migrations.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251002013048_AddApplicationUser")]
-    partial class AddApplicationUser
+    [Migration("20251007001406_CriationOfApplicationUSer")]
+    partial class CriationOfApplicationUSer
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -5,11 +5,11 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CafeteriaKwai.Data;
-public class IdentidadeContext : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext {
-    public IdentidadeContext(DbContextOptions<IdentidadeContext> options)
-        : base(options) {
-    }
-}
+//public class IdentidadeContext : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext {
+//    public IdentidadeContext(DbContextOptions<IdentidadeContext> options)
+//        : base(options) {
+//    }
+//}
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser> {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) {

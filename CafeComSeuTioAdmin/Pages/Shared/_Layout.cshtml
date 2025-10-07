@@ -1,6 +1,12 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+﻿@using CafeteriaKwai.Data.Models;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+	var signedUser = await UserManager.GetUserAsync(User);
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,7 @@
 							@if (SignInManager.IsSignedIn(User))
 							{
 								<a asp-page="/Identity/Pages/Account/AccountInfo">
-									<img src="~/images/interface/profileAccountImage.png" alt="profile account" />
+									<img src="~/images/userPhoto/@signedUser.UserImageFileName" alt="profile account" />
 									<span>Olá, @SignInManager.Context.User.Identity.Name !</span>
 								</a>
 							}
