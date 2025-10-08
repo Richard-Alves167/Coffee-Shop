@@ -54,20 +54,22 @@
 								<span>Selecionar ícone de perfil</span>
 								<button onclick="CloseImageIconUser()">X</button>
 							</div>
-							<div class="selectUserImageWindowPrincipal">
+							<form method="post" enctype="multipart/form-data" class="selectUserImageWindowPrincipal">
 								<div class="divSelectUserImage">
-									<label for="userImage">Imagem de Perfil: </label>
+									<label asp-for="@Model.user.UserImageFile">Imagem de Perfil: </label>
 									<input type="file"
 										   id="userImage"
 										   oninput="VisualizarImagemSelecionada(this, 'previaImagemSelecionada')"
+										   asp-for="@Model.user.UserImageFile"
 										   accept="image/*" />
+									<span>Somente arquivos: JPG | JPEG | WEBP | PNG | GIF </span>
 									<img id="previaImagemSelecionada" alt="Imagem selecionada" />
 								</div>
-								<button class="selectUserImageButton"
+								<button asp-page-handler="edit" class="selectUserImageButton"
 										onclick="CloseImageIconUser()">
 									Selecionar imagem
 								</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>

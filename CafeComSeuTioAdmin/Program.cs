@@ -37,6 +37,7 @@ builder.Services.ConfigureApplicationCookie(options => {
 //    .AddEntityFrameworkStores<CafeContext>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepositoryEF>();
+builder.Services.AddScoped<IIdentityRepository, IdentityRepositoryEF>();
 
 var app = builder.Build();
 
